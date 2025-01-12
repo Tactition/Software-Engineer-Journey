@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>index db</title>
+</head>
+
+<body>
+
+ <pre>Html  is like api to access the browser application like webstoreage.cookies localstorage indexeddb 
+ 
+  in browser we have codecs and plugins that the codes which are responsible to play or display audio vedio 
+  and images. browser has applications for everything like download manager, pdf reader, vedio player, audio player,
+  image viewer, etc. eg downlooad application is used to download the files from the internet.or manage the downloading
+  tasks like pause, resume, cancel, and how much the file is downloaded.
+
+ browser database : browser database is a applicatation in chrome. which behave like database and store the data in the browser.
+
+ browser database is client side database : it is a databases which are stored in the client side. like localstorage, indexdb, websql, etc.
+
+ to store the data in the browser we have to use the client side programming language like javascript, jquery, etc. to store the data in the
+  browser. and same for server side we have to use the server side programming language like php, asp.net, etc. to store data or control data .
+
+ <u>in database we store data in form of text or string or text form .. </u> 
+ 
+ <B> how database store the data ..</B>  in database we store the data in the form of table .. table is a collection of rows and columns. 
+ in each row we store the data in the form of columns. and each column has a name and each row has a unique id or key.
+
+ <code>window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;</code>
+
+  first we check weather the browser support the db with the help of the below code. if the browser support the db then we can use the db in the browser.
+
+  <code>var index_check = window.indexedDB || window.mozIndexedDB || window.webkitIndexedDB || window.msIndexedDB || window.shimIndexedDB;
+   
+   if(!index_check){
+    console.log("IndexedDB is not supported");
+   }
+   else{
+    console.log("IndexedDB is supported");
+   }</code>
+
+   then : we take permision to store data ... by transaction permision
+
+   <b>what is database transaction :</b> as we know transaction giving or receiving .. same is here transaction here means storing or reteriving data.. from database ... 
+
+  in order to retrive the data or store the data we need permission.. read and write permission it is called as <u>transaction permision</u>
+
+
+  how to take transaction permision: 
+
+  <!-- it is also window property  -->
+  <code>
+   window.IDBTransaction =  it is writted to get all the 
+  </code>
+
+  
+
+
+
+
+  </code>
+ 
+
+
+ </pre>
+
+ <button>delete</button>
+
+ <script>
+
+  // check the window db 
+  window.indexedDB = window.indexedDB || window.webkitIndexedDB || window.mozIndexedDB;
+
+  // get the permission to read and write
+  window.IDBTransaction = window.IDBTransaction || window.msIDBTransaction || window.webkitIDBTransaction
+
+
+  if (!window.indexedDB) {
+   console.log("IndexedDB is not supported");
+  }
+  else {
+   var database = indexedDB.open("ZahidDB", 2);  //here thus is like requst 
+   database.onsuccess = function () {
+    console.log(this.result)
+   }
+  }
+
+  
+
+
+
+
+ </script>
+
+</body>
+
+</html>

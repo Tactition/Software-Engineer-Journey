@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title> Calculator </title>
+
+  <style>
+    input[type=button] {
+      border: none;
+      padding: 18px;
+      border-radius: 40px;
+      font-size: 22px;
+    }
+    input[name=result]{
+      border:2px solid black;
+      width: fit-content;
+      height:34px;
+      font-size: 30px;
+    }
+
+    table{
+      border: 2px solid black;
+    }
+
+
+  </style>
+
+</head>
+
+<body>
+
+  <form name="wap">
+    <table width="300" height="400" align="center">
+      <caption>
+        <font face="century gothic"><B>HTML Calculator</B></font>
+      </caption>
+      <tr>
+        <td colspan="4" height="40">
+          <input name="result">
+        </td>
+      </tr>
+
+      <tr>
+        <td bgcolor="orange">
+          <center> <input type="button" value="1" onclick="document.wap.result.value+=1"> </center>
+        </td>
+        <td bgcolor="orange">
+          <center> <input type="button" value="2" onclick="document.wap.result.value+=2"> </center>
+        </td>
+        <td bgcolor="orange">
+          <center> <input type="button" value="3" onclick="document.wap.result.value+=3"> </center>
+        </td>
+        <td bgcolor="orange">
+          <center> <input type="button" value="+" onclick="document.wap.result.value+='+'"> </center>
+        </td>
+      </tr>
+
+      <tr>
+        <td bgcolor="orange">
+          <center> <input type="button" value="4" onclick="document.wap.result.value+=4"> </center>
+        </td>
+        <td bgcolor="orange">
+          <center> <input type="button" value="5" onclick="document.wap.result.value+=5"> </center>
+        </td>
+        <td bgcolor="orange">
+          <center> <input type="button" value="6" onclick="document.wap.result.value+=6"> </center>
+        </td>
+        <td bgcolor="orange">
+          <center> <input type="button" value="-" onclick="document.wap.result.value+='-'"> </center>
+        </td>
+      </tr>
+
+      <tr>
+        <td bgcolor="orange">
+          <center> <input type="button" value="7" onclick="document.wap.result.value+=7"> </center>
+        </td>
+        <td bgcolor="orange">
+          <center> <input type="button" value="8" onclick="document.wap.result.value+=8"> </center>
+        </td>
+        <td bgcolor="orange">
+          <center> <input type="button" value="9" onclick="document.wap.result.value+=9"> </center>
+        </td>
+        <td bgcolor="orange">
+          <center> <input type="button" value="*" onclick="document.wap.result.value+='*'"> </center>
+        </td>
+      </tr>
+
+      <tr>
+        <td bgcolor="orange">
+          <center> <input type="button" value="." onclick="document.wap.result.value+='.'"> </center>
+        </td>
+        <td bgcolor="orange">
+          <center> <input type="button" value="0" onclick="document.wap.result.value+=0"> </center>
+        </td>
+        <td bgcolor="orange">
+          <center> <input type="button" value="=" onclick="document.wap.result.value=eval(document.wap.result.value)">
+          </center>
+        </td>
+        <td bgcolor="orange">
+          <center> <input type="button" value="/" onclick="document.wap.result.value+='/'"> </center>
+        </td>
+      </tr>
+
+    </table>
+  </form>
+
+</body>
+
+</html>
