@@ -1,0 +1,116 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>grid</title>
+
+    <style>
+        @charset "UTF-8";
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            width: 100%;
+            height: 100vh;
+            margin: 0;
+            padding: 0;
+
+        }
+
+
+        .container {
+
+            margin: 10px;
+            background-color: #dcd7d7;
+            display: grid;
+            grid-template-columns: repeat(3, 100px);
+            grid-template-rows: repeat(3, 100px);
+            column-gap: 10px;
+            grid-auto-flow: row dense;
+            /* here dense is used to cut unused space left becoz of grid col start property*/
+            row-gap: 10px;
+            border: 1px solid black;
+        }
+
+        .items {
+
+            background-color: blueviolet;
+            padding: 12px;
+            text-align: center;
+            display: grid;
+
+        }
+
+        #item-1 {
+            grid-column-start: 1;
+            grid-column: 2;
+
+            /* grid-row-start: 1;
+            grid-row-end: 2; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <h2 align="center"> Grid is a system that helps us to divide the elements (layout) in columns and rows</h2>
+
+        grid has 12 properties And only 8 are Important and other 4 are optional to Use
+
+        <ol> // parent
+
+            <h4>used In parent container</h4>
+
+            <li>grid-template-columns : it is used to define number of cols and thier size like
+                <code>repeat(2,ifr/100px) </code>
+            </li>
+            <li>grid-template-rows : it is used to define no of rows and thier size like
+                <code>repeat(2,ifr/100px) </code>
+            </li>
+            <li>Col-gap : it is used to define the col gap in grid</li>
+            <li>Row-gap : it is used to define the row gap in Grid </li>
+
+            <h4>used In child container</h4>
+
+            <li>grid-column-start</li>
+            <li>grid-column-end</li>
+            <li>grid-row-start</li>
+            <li>grid-row-end </li>
+
+            <h4>Optional in container </h4>
+
+            <li>grid-auto-flow</li>
+            <li>grid-auto-row </li>
+            <li>grid-auto-column</li>
+            <li>Grid-template-area</li>
+
+
+        </ol>
+
+    </div>
+
+    <div class="container">
+
+        <div class="items" id="item-1">1</div>
+        <div class="items">2</div>
+        <div class="items">3</div>
+        <div class="items">4</div>
+        <div class="items">5</div>
+        <div class="items">6</div>
+        <div class="items">7</div>
+        <div class="items">8</div>
+        <div class="items">9</div>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>

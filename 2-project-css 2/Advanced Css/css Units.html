@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shariyaans css</title>
+
+    <style>
+        div{
+            padding: 12px;
+        }
+        .px{
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+        
+        .per{
+            width: 20%;
+            height: 50px !important;
+            background-color: yellow;
+            display: block;
+            border: 1px solid black;
+        }
+        .vhvw{
+            width: 50vw;
+            height: 50vh;
+            background: green;
+        }
+
+        .em
+        {
+            height: 8em;
+            width: 8em;
+            background: orange;
+        }
+
+        .rem{
+            width: 10rem;
+            height: 10rem;
+            background-color: aqua;
+        }
+
+    </style>
+</head>
+<body>
+    <p>Px : i take width in pixels and i am static
+    </p>
+    <div class="px">
+        i am made with px 
+    </div>
+
+    <p>% : I am percent and i take value in percents . means i take value with respect to screen size .and i can change myself with respect to screen size </p>
+    <div class="per">
+        i am made with percent
+    </div>
+
+    <p>vh and vw : i take value in vh and vw whic means i take the value according to screen or viewports size of user .</p>
+    <div class="vhvw">
+        i am made with vh and vw
+    </div>
+
+    <p> em: i take value as the multiplier of the font size means if the font size is 16 and my value is 2em .. i will give the size of text or  width and height of the property as to 16*2 = 32 .</p>
+    <div class="em">
+       i am made with em
+    </div>
+
+    <p>i am made with rem i am same is em but i dont take the font size of same elemnet or parent elemnet . i take font size of html tag</p>
+    <div class="rem">
+        I Am made with rem
+    </div>
+
+
+    <p>Max and min width : in max or min width we can set the boundery on limit to any elemnet from taking width or height</p>
+
+
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>flex box Navbar</title>
+
+    <style>
+        .navbar {
+            background-color: black;
+            color: white;
+            display: flex;
+            justify-content: space-between;
+            padding: 12px;
+        }
+
+        ul {
+            display: flex;
+            /*flex : makes the elemet row and converts allthe  childerns in block or inline  elments*/
+            list-style-type: none;
+            flex-direction: row;
+            align-items: center;
+            gap: 22px;
+        }
+
+
+        #one {
+            order: 1;
+        }
+
+        #two {
+            order: 2;
+        }
+
+        /* by default order of each element is 0 . and if we pass the order in anyof sibling in row .. we can change the order and the element will be placed in that order means ..0 0 0 1 2  */
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="navbar">
+        <h1>Logo</h1>
+
+        <ul>
+            <li id="one">Home </li>
+            <li id="two">Menu</li>
+            <li id="three">Services</li>
+            <li id="four">About</li>
+            <li id="five">Contact</li>
+        </ul>
+
+
+    </div>
+
+</body>
+
+</html>

@@ -1,0 +1,23 @@
+<?php   get_header();?>
+
+
+<?php if (have_posts()): while (have_posts()) : the_post(); ?>
+<div class="innerproducts">
+    <?php
+// Must be inside a loop.
+ 
+if ( has_post_thumbnail(89) ) {
+   echo get_the_post_thumbnail(89);
+}
+else {
+    echo '<img src="http://via.placeholder.com/1349x300" />';
+}
+           
+?>
+
+    
+<?php  
+         endwhile; 
+            endif;
+                                ?>
+<?php get_footer(); ?>

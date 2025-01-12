@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Focus on today</title>
+    <style>
+        :root {
+            --main-1: #008316;
+            --color-2: #61481c;
+        }
+
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #d0d0d0;
+            height: 100dvh;
+            width: 100vw;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        main {
+            width: 400px;
+            background-color: #fff;
+            padding: 20px 40px;
+
+        }
+
+        h1 span {
+            color: var(--main-1);
+        }
+
+        h1 {
+            color: var(--color-2);
+            font-size: 40px;
+        }
+
+        .input {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px;
+            margin: 10px 0;
+            border: 1px solid gray;
+            border-radius: 5px;
+        }
+
+        .input input {
+            padding: 5px 10px;
+            border: none;
+            /* outline: none; */
+        }
+
+        input[type='text'] {
+            width: 280px;
+            background-color: transparent;
+        }
+
+        .click {
+            width: 25px;
+            height: 25px;
+            cursor: pointer;
+            /* display: none; */
+
+
+        }
+
+        .progress-box {
+            margin-top: 30px;
+        }
+
+        .progress-bar {
+            margin-top: 10px;
+            background-color: var(--color-2);
+            width: 100%;
+            height: 20px;
+            border-radius: 10px;
+            position: relative;
+        }
+
+        .green {
+            position: absolute;
+            width: 0%;
+            height: 100%;
+            border-radius: 10px;
+            background-color: green;
+
+        }
+
+        .style {
+            background-color: rgba(155, 149, 149, 0.44);
+        }
+
+        .disable {
+            pointer-events: none;
+        }
+
+        footer p {
+            text-align: center;
+        }
+
+        .added {
+            display: block;
+
+        }
+
+        .alert {
+            color: red;
+            margin-top: 30px;
+            font-weight: bold;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <h1><span>Focus on</span> Today</h1>
+        <section>
+            <h2>Today 🌞</h2>
+
+            <div class="progress-box">
+                <p>Just a step away, keep going!</p>
+                <div class="progress-bar">
+                    <div class="green"></div>
+                </div>
+            </div>
+            <div class="alert">Input task</div>
+            <div class="tasks-box">
+                <div class="input">
+                    <input type="checkbox" class="click" id="check">
+                    <input type="text" placeholder="Add new goal" class="inputbox" id="firstfeild">
+                </div>
+                <div class="input">
+                    <input type="checkbox" class="click">
+                    <input type="text" placeholder="Add new goal">
+                </div>
+                <div class="input">
+                    <input type="checkbox" class="click">
+                    <input type="text" placeholder="Add new goal">
+                </div>
+
+            </div>
+
+            <footer>
+                <p>"Move one step ahead, today!"</p>
+            </footer>
+        </section>
+    </main>
+
+
+    <script>
+
+        let checkbox = document.querySelectorAll('.click');
+        let width = 0;
+        checkbox.forEach((e) => {
+            e.addEventListener('click', () => {
+                e.parentElement.classList.toggle('style');
+                e.nextElementSibling.classList.toggle('disable');
+
+                let progressBar = document.querySelector('.green');
+                if (e.checked) {
+                    width = width + 33.339;
+                } else {
+                    width = width - 33.339;
+                }
+                width = Math.max(0, Math.min(100, width));
+                progressBar.style.width = width + '%'
+
+            });
+        });
+
+        // Select all text input fields
+        let textInputs = document.querySelectorAll("input[type='text']");
+        textInputs.forEach((event) => {
+            event.addEventListener('click', () => {
+                event.previousElementSibling.classList.add('added');
+            });
+        });
+
+
+  
+
+        var input = document.getElementById("firstfeild");
+        input.addEventListener('input',function(event){
+            localStorage.setItem("farhan", event.target.value);
+        })
+        
+        function load(){
+
+        input.value=localStorage.getItem("farhan");
+
+            var check = document.getElementById("check");
+            input.style.display="block"
+            input.focus;
+            check.checked=true;
+            // alert("skjfdsll")
+        }
+
+        load();
+
+
+
+        // var input = document.getElementById("firstfeild");
+        // input.addEventListener('input',function(event){
+        //     localStorage.setItem("farhan", event.target.value)
+
+        //     alert(event.target.value)
+        // })
+        
+        // input.oninput = function () {
+        //     var data = input.value;
+        //     localStorage.setItem("farhan", data)
+
+        // }
+        
+        // var savedata = localStorage.getItem("farhan")
+        // input.value = savedata;
+
+
+
+
+
+
+
+
+
+    </script>
+
+
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css grid</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: gilroy;
+        }
+
+        body,
+        html {
+            width: 100%;
+            height: 100%;
+
+        }
+
+        #main {
+            width: 100%;
+            height: 100%;
+            display: grid;
+            grid-template-columns: 25% 25% 50%;
+            grid-template-rows: 26% 55% 19%;
+
+        }
+
+        .topleft {
+            padding: 30px;
+        }
+
+        .square {
+            width: 25px;
+            height: 26px;
+            rotate: 45deg;
+            background-color: black;
+        }
+
+        .topright {
+            justify-self: right;
+            text-align: right;
+            padding: 20px;
+            color: #171717;
+            font-family: sans-serif;
+
+        }
+
+        .topright h4 {
+            color: orange;
+            margin-bottom: 30px;
+
+        }
+
+        .topright h5 {
+            font-weight: 600;
+        }
+
+        .leftcenter {
+            grid-column: 1 / 3;
+            padding: 18px;
+            line-height: 12vh;
+        }
+
+        .leftcenter h5 {
+            font-size: 6vw;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+
+        .leftcenter h5:nth-child(2n) {
+            color: #171717;
+            font-weight: 600;
+            text-align: center;
+        }
+
+        .bottom {
+            grid-column: 1 / 3;
+            padding: 22px;
+        }
+
+        .bottom p {
+            width: 70%;
+            font-size: 14px;
+            text-align: left;
+        }
+
+        .right {
+            grid-column: 3 / 4;
+            grid-row: 1 / 4;
+            padding: 10px 40px;
+
+        }
+
+        .right video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 12px;
+        }
+
+        @media (max-width:600px) {
+
+            #main {
+                display: grid;
+                grid-template-columns: 50% 50%;
+                grid-template-rows: 60px 40% 12%;
+                padding: 8px;
+            }
+
+            .topleft {
+                padding: 14px;
+            }
+
+            .topright {
+                justify-self: unset;
+                text-align: right;
+                padding: 12px;
+                color: #171717;
+                font-family: sans-serif;
+            }
+
+            .topright h5,
+            h4 {
+                display: none;
+            }
+
+            .leftcenter {
+                grid-row-start: 2;
+                padding: 8px;
+                line-height: 8vh ;
+                padding:14px 18px;
+
+            }
+
+            .leftcenter h5 {
+                font-size:14vw;
+            }
+
+            .bottom{
+                font-size: 8px;
+                padding: 12px;
+                /* background-color: yellowgreen; */
+
+            }
+
+
+
+            .right {
+                grid-row: 4 / 4;
+                grid-column: 1 / 3;
+            }
+
+            .right video{
+                height: 42vh;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="main">
+        <div class="topleft">
+            <div class="square"></div>
+        </div>
+        <div class="topright">
+            <h4>Menu</h4>
+            <h5>Home</h5>
+            <h5>About</h5>
+            <h5>Services</h5>
+            <h5>Contact</h5>
+            <h5>Portfolio</h5>
+        </div>
+
+        <div class="leftcenter">
+            <h5>Select </h5>
+            <h5>Fashion</h5>
+            <h5>Mode.05-</h5>
+            <h5>Scene</h5>
+        </div>
+
+        <div class="bottom">
+            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Vero recusandae aliquam beatae voluptates?</p>
+        </div>
+        <div class="right">
+            <video src="walking.mp4" autoplay muted></video>
+        </div>
+    </div>
+
+</body>
+
+</html>
