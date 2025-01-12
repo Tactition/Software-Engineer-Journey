@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>fade Animation</title>
+
+ <style>
+
+.circle{
+ width: 100px;
+ height: 100px;
+ background-color: red;
+ border-radius:50%;
+padding: 50px;
+ -webkit-animation: circle 4s infinite;
+ -moz-animation:circle 4s infinite ;
+ -o-animation:circle 4s infinite ;
+ position: relative;
+ animation:circle 4s infinite;
+
+}
+@keyframes circle{
+ 0%{
+  top:0;
+  left:0;
+  width: 100px;
+  height: 100px;
+ }
+
+ 25%{
+  top:100px;
+  left:200px;
+  width:150px;
+  height: 150px;
+ }
+
+ 50%{
+  top:200px;
+  left: 400px;
+  width: 200px;
+  height: 200px;
+ }
+
+ 75%{
+  top:100px;
+  left:200px;
+  width: 150px;
+  height: 150px;
+ }
+
+ 100%{
+  top:0px;
+  left:0px;
+  width: 100px;
+  height: 100px;
+  color: black;
+ }
+}
+ 
+
+
+ </style>
+
+</head>
+<body>
+ 
+
+ <div class="circle">
+ <h2 align="center">Zahid</h2>
+ </div>
+
+
+</body>
+</html>

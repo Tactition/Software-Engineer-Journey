@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+
+ <style>
+
+.slider-page{
+ width: 720px;
+ height: 480px;
+ margin: 10px auto;
+ box-shadow: 2px 2px 10px 4px gray;
+ overflow:hidden;
+}
+
+.slider{
+ width: 3600px;
+ height: 480px;
+ float: left;
+ position: relative;
+ animation: slide 10s infinite;
+
+}
+
+@keyframes slide{
+ 0%{
+  top:0px;
+  left:0px;
+ }
+ 20%{
+  top: 0;
+  left:-720px;
+ }
+ 30%{
+ top: 0;
+ left:-720px; 
+ }
+ 40%{
+ top: 0;
+ left:-1440px; 
+ }
+ 50%{
+ top: 0;
+ left: -1440px; 
+ }
+ 60%{
+ top: 0;
+ left:-2160px; 
+ }
+ 70%{
+ top: 0;
+ left:-2160px; 
+ }
+ 80%{
+ top: 0;
+ left: -2880px; 
+ }
+ 90%{
+ top: 0;
+ left: -2880px; 
+ }
+
+ 100%{
+  top: 0;
+ left: 0;
+ }
+}
+
+.pic{
+ float: left;
+}
+
+
+ </style>
+
+</head>
+<body>
+ 
+<div class="slider-page">
+ <div class="slider">
+  <img src="images/1img.jpg" alt="" class="pic">
+  <img src="images/2img.jpg" alt="" class="pic">
+  <img src="images/3img.jpg" alt="" class="pic">
+  <img src="images/4img.jpg" alt="" class="pic">
+  <img src="images/5img.jpg" alt="" class="pic">
+
+
+ </div>
+
+</div>
+
+</body>
+</html>

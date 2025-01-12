@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+
+ <style>
+  h1 {
+   width: fit-content;
+   color: red;
+   margin: 20px auto;
+   font-family: sans-serif;
+   font-size: 40px;
+
+  }
+ .frame{
+  width:710px;
+  height: 510px;
+  border:10px solid red;
+  box-sizing: border-box;
+  margin: 0 auto;
+  background: url(images/1img.jpg);
+  background-size: cover;
+
+ }
+
+.frame{
+ -webkit-animation:anime 10s infinite; 
+  -o-animation:anime 10s infinite;
+  -moz-animation:anime 10s infinite;
+  animation:anime 10s infinite;
+}
+
+ @keyframes anime{
+  0%{
+   background: url(images/1img.jpg);
+   background-size: cover;
+   
+  }
+
+  25%{
+   background: url(images/2img.jpg);
+   background-size: cover;
+  
+  }
+
+  50%{
+   background: url(images/3img.jpg);
+   background-size: cover;
+  
+  }
+
+  75%{
+   background: url(images/4img.jpg);
+   background-size: cover;
+
+  }
+
+  100%{
+   background: url(images/5img.jpg);
+   background-size: cover;
+  
+  }
+ }
+
+
+ </style>
+
+</head>
+
+<body>
+
+ <h1>Web Assets</h1>
+
+
+ <div class="frame">
+
+ </div>
+
+
+
+</body>
+
+</html>

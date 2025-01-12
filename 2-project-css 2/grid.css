@@ -1,0 +1,232 @@
+@charset "utf-8";
+
+
+*{
+ box-sizing: border-box;
+}
+.row{
+ clear: both;
+}
+
+.col-1 {
+  width: 8.33%;
+ }
+.col-2 {
+  width: 16.66%;
+ }
+.col-3 {
+  width: 25%;
+ }
+.col-4 {
+  width: 33.33%;
+ }
+.col-5 {
+  width: 41.66%;
+ }
+.col-6 {
+  width: 50%;
+ }
+.col-7 {
+  width: 58.33%;
+ }
+.col-8 {
+  width: 66.66%;
+ }
+.col-9 {
+  width: 75%;
+ }
+.col-10 {
+  width: 83.33%;
+ }
+.col-11 {
+  width: 91.66%;
+ }
+.col-12 {
+  width: 100%;
+ }
+
+/* Desktiop responsive */
+
+body{ 
+ padding: 0;
+ margin: 0;
+}
+
+
+body::-webkit-scrollbar{
+  width: 12px;
+
+}
+
+body::-webkit-scrollbar-track{
+  background-color:	rgb(119, 118, 118);
+  border-radius: 22px;
+}
+
+body::-webkit-scrollbar-thumb{
+  background-color: #F90;	
+  border-radius: 22px;
+}
+
+
+.header, .nav, .section, .footer{
+ border: 1px solid black;
+ margin:0 4%;
+
+}
+
+.header{
+ height: 120px;
+ padding-top:10px;
+ background-color:#000000;
+}
+
+.nav{
+ height: 60px;
+ clear: both
+}
+
+.section{
+ height:650px;
+ background-color: gray;
+}
+
+.footer{
+ height:60px;
+ clear: both;
+}
+
+.header{
+ text-align: center;
+ line-height: 12px;
+ color:orangered;
+ font-family: sans-serif;
+}
+
+
+ul{
+ list-style: none;
+ margin: 0;
+ padding: 0;
+}
+
+li{
+ float: left;
+ background-color: orange;
+ height: 60px;
+ padding-top:20px ;
+ text-align: center;
+}
+
+a{
+ color: white;
+ text-decoration: none;
+ font-family: sans-serif;
+ font-size:larger;
+}
+
+
+/* resp phone */
+
+
+@media only screen and (max-width:600px)
+{
+ 
+
+.header, .nav, .section, .footer{
+ margin:0;
+}
+
+.header{
+ height:100px;
+}
+
+.col-11{
+ width: 100%;
+}
+
+.col-3{
+ width: 100%;
+ clear: both;
+ height: 28px;
+}
+
+.nav{
+ height: auto;
+}
+
+li{
+ margin-top:1px ;
+ padding-top:7px;
+}
+
+.section{
+ height:300px;
+ clear: both;
+}
+
+.footer{
+ height: 24px;
+ line-height: normal;
+ margin: 0;
+}
+
+.footer p{
+ margin:6px;
+ font-size: 12px;
+}
+
+} 
+
+
+/* tab/ */
+
+@media only screen and (min-width:768px) and (max-width:992px){
+ 
+ .header{
+  height: 80px;
+  padding-top: 0;
+ }
+
+ .col-3{
+  width: 50%; 
+ }
+
+ .nav{
+  height: auto;
+ }
+
+ li{
+  margin-top:2px;
+ }
+
+ .section{
+  clear: both;
+ } 
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

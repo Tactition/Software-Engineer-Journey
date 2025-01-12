@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+ <style>
+
+.one, .two, .three, .four, .five{
+ float: left;
+ animation: name 5s infinite;
+
+}
+
+h1{
+ font-size: 300px;
+ font-family: cursive;
+ color: #ffffff;
+ margin:0;
+}
+
+/* here we have duration of 5 sec ,no we will pass that on 5o % cange the transparent color to orange  and then we wil run the animation for every class consecatively with delayed manner so evety word will be displayed 1/1 and animation gets formed */
+
+@keyframes name{
+
+ 50%{
+  color: #f90;
+ }
+}
+.two{
+ animation-delay:0.5s;
+ margin-top:60px;
+}
+.three{
+ animation-delay:1s;
+ margin-bottom:60px;
+}
+.four{
+ animation-delay:1.5s;
+ margin-top:60px;
+}
+.five{
+ animation-delay:2s;
+ margin-bottom:60px;
+}
+
+
+
+
+
+
+ </style>
+</head>
+
+<body>
+ 
+
+<h1 class="one">Z</h1>
+<h1 class="two">A</h1>
+<h1 class="three">H</h1>
+<h1 class="four">I</h1>
+<h1 class="five">D</h1>
+
+
+
+
+
+
+
+
+
+</body>
+</html>

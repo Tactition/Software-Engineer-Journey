@@ -1,0 +1,123 @@
+<!doctype html>
+<html>
+<head>
+<meta lang="en-US">
+<meta char="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, touch-zooming=no">
+<title>advertisment</title>
+<style>
+
+ .container{
+  width: 460px;
+  height:110px;
+  margin: 100px auto;
+  background-color:#F1EEB9;
+  overflow: hidden;
+  border: 1px solid blueviolet;
+ }
+ 
+ .photo,h2,p,button{
+  float: left;
+  margin: 0px;
+ }
+ 
+ .photo{
+  position: relative;
+  animation: photo 4s 1;
+  
+ }
+ 
+ @keyframes photo{
+  0%{
+   top: 0px;
+   left:0px;
+  }
+ 
+  25%{
+   top: 0;
+   left: -200px;
+  }
+  50%{
+   top:0px;
+   left: 0;
+  }
+  75%{
+   top: 200px;
+   left: 0;
+  }
+  100%{
+   top: 0;
+   left: 00;
+  }
+ }
+ 
+ h2{
+  color:#ff4500;
+  font-family: sans-serif;
+  margin: 2px 10%;
+  font-size: 32px;
+  position: relative;
+  animation:web 2s 1;
+ }
+ 
+ @keyframes web{
+ 
+  0%{
+   top: 0;
+   left: 0;
+  }
+ 
+  100%{
+   top: -200px;
+  }
+ 
+ }
+ 
+ p{
+  color:gray;
+  font-family: Arial;
+  margin: 0 5%;
+  font-size: 14px;
+ }
+ button{
+  margin: 5px 16%;
+  width: 100px;
+  height: 40px;
+  border: none;
+  color: white;
+  background-color: black;
+  animation:btn 2s infinite;
+ }
+ @keyframes btn{
+  0%{
+   background-color: orange;
+  }
+ 
+  40%{
+   background-color:orangered;
+  }
+ 
+  80%{
+   background-color: chartreuse;
+  }
+ 
+  100%{
+   background-color:#ffbb00;
+  }
+ }
+ </style>
+</head>
+
+<Body>
+
+
+<div class="container">
+<img src="images/sam-add.jpg" alt="" class="photo" height="110" width="180">
+<h2>Web Assets</h2>
+<p>Innovating The Futuristic Technology</p>
+<button onclick="alert('Welcome To Web Assets')">Book Now</button>
+</div>
+
+
+</Body>
+</html>
