@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+
+</head>
+
+<body>
+
+    <ul>
+        <li> <b> rand() </b>: it is used to generate the one random number from one number to another
+            <code>rand(10,12);</code> this will generate the random number betwen 10 to 12 means 10,11,12 <br>
+            <u>note :</u> it only generates from numbers
+        </li>
+
+        <li>
+            <code>trim() :</code> it is used to remove the space from the string <code>trim("   hello   ");</code>
+        </li>
+
+        <li>
+            <b>strlen() : </b> it is used to find the length of the string <code>strlen("hello");</code>
+        </li>
+
+        <li> <b>print_r()</b>: it is used to print the array <code>print_r($array);</code></li>
+
+        <li><b>impload() :</b> it is used to implode or extract the data from the array
+            <code>implode(", ", $array);</code>
+        </li>
+
+        <li>
+            <b>echo</b>: its used to print anything with php . <br>
+            <b>die()</b> is also used to print anything .. if it executes then the code after it will not work..
+        </li>
+
+        <li>
+            <code>base64_decode()</code> : decrypts the btoa code or md5 hash
+        </li>
+
+        <li>
+            <b>php sessions() :</b> is used to send the session data of one page to onother to ensure the data is not
+            lost when the page is changed for one page to another
+        </li>
+
+        <li> <b>encode() </b> : it is used to convert string into some other formate so that it cant be interprited by
+            the other unwanted user or machines . encode() is used to convert special charecters like space to %20 and
+            other symboles to anything else other then real value. we can also decode it to original form</li>
+
+        <li>
+            <b>encrypt</b> : encrypt converts the data into some other formate so that it cant be interprited by the
+            other unwanted user or machines. but it changes all the charecters into format that cant be readed. we can
+            also decrypt it to original form
+        </li>
+
+        <li><b>how to process and save file in php :</b>In php we can use <code>move_uploaded_file()</code> to upload
+            the file in our server directory to save input file from user to our server directory.
+            <br>
+            <code>
+            <pre>
+            if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+                $input_file = $_FILES["file"];
+            
+                $input_file_name = $input_file['name'];
+                $input_file_tmp = $input_file['tmp_name'];
+            
+                move_uploaded_file($input_file_tmp, "uploads/" . $input_file_name);
+            
+            }</pre>
+        </code>
+        </li>
+
+        <li>
+            <code>str_replace("../", "", $image_path);</code> : it is used to remove the text from string
+            str_replace("what ",
+            "with","from") from the image path
+        </li>
+
+
+        <li>
+            <b>pathinfo()</b> : it is used to get/extract seperate meta information of image like extension and filename
+            with full path
+            <code>$imageInfo = pathinfo($nameNpath);
+                $imageInfo['filename']; </code>
+        </li>
+
+        <li>
+            <b> rename():</b> rename is used to rename the existing string with somthing else . <code>
+                rename("ist/path/image.jpg" , "ist/path/imageRenamed.jpg")
+            </code>
+        </li>
+
+        <li>
+            <b>unlink():</b> it is used to delete the file or anything from dirctory...
+        </li>
+
+
+        <li> <b> json_decode() : </b> it is used to convert the javascript json object to php object to process it in
+            php </li>
+
+        <li><b> json_encode() </b> : it is used to convert the php associative array or php object to json
+            object(javascript object) </li>
+
+        <li>
+            <b>array_keys() : </b> it retrives the key names of array by assesing them with index number+ eg
+            <Pre>
+                <code>
+                    $json = array("keyname"=>"zahid","class"=> '12th',"rolno"=> 12 );
+                    $data = array_keys($json);
+                    data[0] = will give the output "keyname" <!-- not value but -->
+                    $json[data[i]] <!-- this will print the associative array first key value-->
+                </code>
+            </Pre>
+        </li>
+
+        <li>
+            <b>foreach() loop :</b> in php there is a loop which dont requires to set the no of iteration a looop will
+            cover instead it automatically loop according to data inside. eg
+            <pre>
+                <code>
+                    $json = array("keyname"=>"zahid","class"=> '12th',"rolno"=> 12 );
+                    foreach($json as $keyname => $value){
+                        echo "i am ". $keyname "And I am ". $value
+                    }
+                </code>
+            </pre>
+        </li>
+
+        <li>
+            <b>include() :</b> it is used to include any external file into the current document and even if that file has any error the rest of the code below will work regardles of error in linked file. <br>
+            <b>require() :</b>it is also used to include any external file into the current document but if the file dosent work or has any error the code after this will not work
+        </li>
+
+        <li>
+            <b>readfile("filename.ext") : </b> it is used to display the mediafile in the browser with php.
+            but before that <b>header("Content-type:type/ext ")</b>
+
+            <pre>
+                <code>
+                    header(Content-type:video/mp4)
+                    readfile("video.mp4");
+                </code>
+            </pre>
+
+        </li>
+
+
+    </ul>
+
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sql</title>
+</head>
+
+<body>
+
+    <h1>Sql Database</h1>
+    <p>Structured Query Language</p>
+    <pre>
+    Sql is used for following things:
+
+    sql creates databases
+    sql creates tables in database 
+
+    sql can insert data 
+    sql can update data
+    sql can retrive data 
+    sql can delete data
+
+     <p>Database has two type</p> 
+
+     <b>Ist</b>: client Side -- localStorage, indexdb,
+     <b>2nd</b>: server side -- sql mysql and mongodb
+
+    <u>there are two things in database</u> <br>
+     <b>Ist</b> : database language.---like sql for storing the data in database software eg RDBMS          
+     <b>2nd</b>: database Software. --- It is a software where data acctually stores like mysql oracle ms access and microsoft sql server.
+
+     <b>Types of Database Server</b>
+     RDBMS : it is a software which stores the actual data but in terms of table . like rows and columns.
+     
+     Non-RDBMS : these are softwares which also stores data but not in table formate.. these databases store data in json or object(key:value) formate and with help of noSql Language
+
+
+     <h4>Use of Sql</h4>
+    
+    1) <code>CREATE DATABASE DATABASENAME</code> :- Used to Create database in consol or terminal
+
+    2) <code>DROP DATABASE DATABASENAME</code> :- Used to DELETE database in consol or terminal
+
+    3) <code>CREATE TABLE table_Name(
+        admision_no int(255),
+        students_name varchar(255),
+        roll_no int(255)
+        )</code>  :- Used to make table in database through consol or terminal
+        Must define the data type at last of the column name 
+
+    3.5) <code> 
+        CREATE TABLE table_Name(
+        admision_no int(255) NOT NULL AUTO_INCREMENT,
+        students_name varchar(255),
+        PRIMARY KEY(admision_no)
+    </code> --: It is used to create a table with some logi(to avoid null value and increament the number automatically to avoid same column no repetation like serial no)    
+
+    4) <code>INSERT INTO table_name(admision_no,students_name,roll_no)
+          VALUES(1,"abrar",1020);
+        </code>    :- Used to add data in table through consol or terminal
+
+
+    5) <code>SELECT admision_no,students_name FROM table_name</code> :- to get the columns from any table
+
+    6) <code>UPDATE databaseName
+        SET students_name = "Mubii",roll_no = 1200;
+    </code> :- it is used to update the data in in table all the rows will be updated with upper inserted data
+
+    6.5) <code>UPDATE databaseName
+        SET students_name = "Mubii",roll_no = 1200;
+        WHERE students_name ="zahid"
+    </code> :- it is used to update the specific data in row
+
+    7) <code>SELECT * FROM databasename</code> :- to go to database tables
+
+    8) <code>DELETE FROM databaseName WHERE TABLE row-name = table_cell_value </code> --: delete the row from table
+    
+    9) <code> DELETE FROM DATABASENAME </code> :- delete all the data (rows and columns) from database
+
+    9.2) <code>
+        ALTER TABLE tabname
+        DROP COLUMN rollno
+    </code> it is used to delete the column from the table 
+
+    9.4) <code>
+        ALTER TABLE tabname
+        ADD COLUMN rollno int(22)
+    </code> it is used to delete the column from the table 
+
+    9.6) <code>
+        ALTER TABLE tabname
+        MODIFY COLUMN rollno int(22)
+    </code> it is used to delete the column from the table 
+    
+
+    10) <code>SELECT * FROM DATABASENAME LIMIT 2;</code> : it is used to limit the amounnt of data selected in database ranging from top to bottom
+
+    11) <code>SELECT * FROM DATABASENAME 
+              ORDER BY table_cell_data Asc | DESC
+    </code> :- This will sort the table data in terms of ascending(ASC) Or Decending(DESC)
+
+    12) <code> SELECT admision_no FROM DATABASENAME 
+        ORDER BY table_cell_data Asc LIMIT = 4 </code> :-- It selects the admision_no column only and displays you the 4 columns of it 
+
+    13) <code>
+            SELECT SUM(dues) 
+            FROM DATABASENAME
+        </code> :-- SUM keyword is used to sum the entire column data
+
+    14) <code>
+        SELECT COUNT(students_name) 
+        FROM DATABASENAME
+    </code> :-- it counts the number of rows in table of a specific column. 
+
+    15) <code> 
+        SELECT * FROM tableName WHERE PRICE (= | > | < | >=) 4000
+    </code> :-- Sort the data in terms of more then ,less then , equal to or graterthenEqualto
+
+    16) <code> SELECT * FROM Table_Name 
+        WHERE table_col BETWEEN 3000 AND 4000;
+    </code> :-- it is used to find the products frm the table from range between 3k to 4k
+
+    17)<code>
+        SELECT * FROM Table_Name
+        WHERE name="ram" AND roll_no='12';
+    </code> :-- it is used to set condition for data retrival to get the data of whole row all columns
+
+    18) <code>
+        SELECT * FROM Table_Name
+        SET id='4' WHERE NOT id='1'
+    </code> :-- IT is used to set the id of all the columns to anythig else except where id is 1
+
+
+    19) <code>
+        SELECT * FROM Table_Name
+        WHERE product_name LIKE "%d" OR "d%"
+    </code> it sets the condition to retrive only those data which has "d" character in first of Last
+
+    20) <code>
+        SELECT * FROM Table_Name
+        WHERE product_name LIKE "a%d" 
+    </code> it sets the condition to retrive only those data which has "a" character in first and "d" at Last
+
+
+    21) <code>SELECT *,
+         CASE
+          WHEN marks < 50 THEN 'fail' 
+          WHEN marks BETWEEN 50 AND 69 THEN 'second'
+          WHEN marks BETWEEN 70 AND 100 THEN 'first'
+          ELSE 'no division' END AS division FROM students;</code>
+
+          :-- it sorts and defines the new column where students will be compareed on the basis of marks . and then ranked
+
+
+     22) <code>
+        SELECT name , MAX(marks) As "good student" from students;
+     </code>
+
+     :-- it is used to label the students no the basis of min and max marks
+
+
+     23) <code>
+        SELECT 
+        CONCAT(id,'',name,'',age,'',grade,'',marks) As address
+        FROM students
+     </code>
+
+     it is used to join all the data from the row and print them
+
+     24) <code>
+        SELECT * From students
+        WHERE grade IN('A','B')
+     </code> 
+     it is used to retrive the multiple columns from data based on its column data but with "IN()" method
+
+     25) <code>
+        INSERT INTO toppers(s_name) 
+        SELECT name FROM students 
+        WHERE grade IN('A');
+     </code>
+
+        :-- this code will copy the data of students name who has A in their grades column and will put it into the another table nameed toppers inside s_name
+
+
+     realations between table 
+
+     inner join
+     left join
+     right join
+     full join 
+     self Join
+
+     <code>
+        SELECT addmision.name,fee.t_fee FROM addmision
+        INNER JOIN fee
+        ON students.id = fee.id;
+     </code>
+
+     :-- it is used to join the table data or form the releation between diffrent tables in database.. 
+     but to join we must have to keep any colum same(releated) and use Any of join method to form the releation
+
+   
+
+    group By same in Sql
+     <code>
+        SELECT grade FROM students
+        GROUP BY grade;
+     </code>
+     it is used to group the repetative data of the table
+
+
+
+     count the 
+     <code>
+        SELECT COUNT()
+     </code>
+
+
+
+    </pre>
+</body>
+
+</html>
