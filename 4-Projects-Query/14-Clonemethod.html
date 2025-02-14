@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>clone method</title>
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .cloner {
+            width: 440px;
+            border: 1px solid black;
+            background-color: bisque;
+            padding: 12px;
+            float: left;
+            margin: 10px;
+        }
+
+        #newdiv{
+            clear: both;
+            float: left;
+        }
+
+    </style>
+</head>
+
+<body>
+    <blockquote>clone method is used to duplicate or clone the element/content of any element/div to another <br>
+        Its is used with prependTo() method to add/duplicate the content bcoz prepen</blockquote>
+
+    <main>
+        <div class="cloner" id="cloner">
+            <h2>I am heading</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt, iusto porro animi modi nobis doloribus
+                earum dolorem, rem eos eius illum dolores enim deleniti?</p>
+            <i class="fa fa-long-arrow-right"></i>
+        </div>
+
+        <div class="cloner" id="duplicate">
+            <span>Press me to get the content of left div inside me by clone method</span>
+        </div>
+
+
+        <button id="newdiv" >make a new Clone</button>
+
+    </main>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(
+            function () {
+                $("#duplicate").click(function () {
+                    $("#cloner h2,p").clone().prependTo("#duplicate");
+                    $("#duplicate").off("click")
+                })
+                
+                $("#newdiv").click(function(){
+                    var newDiv = $("<div></div>").attr({"class":"cloner","id":"newbox"}).text("I am new Div dynamically created");
+                    $(newDiv).appendTo("body")
+                    $("#duplicate").contents().clone().prependTo("#newbox");
+                })
+
+            }
+        )
+
+
+
+
+    </script>
+</body>
+
+</html>

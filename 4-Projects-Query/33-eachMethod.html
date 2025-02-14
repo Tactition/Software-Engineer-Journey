@@ -1,0 +1,30 @@
+<!-- https://kukufm.com/show/psychology-of-money-2 -->
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>each Method</title>
+
+</head>
+<body>
+    <p><B>Each() : </B>This method iterates through all the element and executes the function or any effects on that elements . it is like loop which goes through all the elemnts to execute the function on them </p>
+    
+    <ul>
+        <li>Apple</li>
+        <li>Mango</li>
+        <li>orange</li>
+        <li>banana</li>
+        <li>pineapple</li>
+    </ul>
+
+    <script src="jquery.js"></script>
+    <script>
+
+        $(document).ready(function(){
+           $("li").each(function(){
+            console.log($(this).text())
+           })
+        })
+    </script>
+</body>
+</html>

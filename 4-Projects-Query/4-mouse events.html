@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MOuse Events </title>
+</head>
+
+<body>
+
+    <p>Perform the Expariment here</p>
+
+    <script src="jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            // $("p").click(function () {
+            //     alert("You clisked on paragraph");
+            // });
+
+            $("p").dblclick(function () {
+                alert("You double clicked on paragraph");
+            });
+
+            // $("p").mouseenter(function () {
+            //     alert("You  entered mouse on paragraph");
+            // });
+
+            $("p").mouseleave(function () {
+                alert("You left mouse on paragraph");
+            });
+
+            // thhese are all the functiions which will work individualy when specific event is triggered
+            
+        });
+    </script>
+</body>
+
+</html>

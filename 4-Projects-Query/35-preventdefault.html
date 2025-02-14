@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>preventDefault</title>
+</head>
+
+<body> 
+
+    <p>preventDefault() method is used to prevent Event from doing or performing its default behaviiour . it is mainly used to over ride the browser default behaviiour from executing <br> 
+    
+    isDefaultPrevented() : this method return weather we have set the preventDefault on any element or not . if we have set preventDefault on any element it will return true and vice versa
+    </p>
+
+    <a href="https://www.facebook.com">Click to login to faceboook</a>
+
+    <script src="jquery.js"></script>
+    <script>
+        $("a").click(function (event) {
+            event.preventDefault();
+        })
+    </script>
+</body>
+
+</html>

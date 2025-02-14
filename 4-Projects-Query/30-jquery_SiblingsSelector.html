@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>siblings method</title>
+</head>
+
+<body>
+    <p>in jquery there are methods to select the parent or childrens and what if we want select the sibling or fellow
+        element of any container . means other element of same parent container . for that we use </p>
+
+    <ul>
+        <li>siblings()</li>
+        <li>next()</li>
+        <li>nextAll()</li>
+        <li>nextUntil()</li>
+
+        <li>prev()</li>
+        <li>prevAll()</li>
+        <li>prevSiblings()</li>
+
+    </ul>
+
+
+    <div id="parent" style="width: 90%;padding: 12px;border: 1px solid black;">
+        <p>Parent</p>
+        <div id="child" style="width: 80%;padding: 12px;border: 1px solid black;">
+            <p>child</p>
+            <div id="siblings" style="width: 60%;padding: 12px; border: 1px solid black;">
+                <span>previuos</span>
+                <p>siblings</p>
+                <p>sec siblings</p>
+                <p id="stop">third siblings</p>
+                <p id="last">fourth siblings</p>
+                
+            </div>
+        </div>
+
+
+    </div>
+    </div>
+
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            // $("#siblings p").siblings().css("background-color", "red");
+            // $("#siblings p").next().css("background-color", "green");
+            // $("#siblings p").nextAll().css("background-color", "blue");
+            // $("#siblings p").nextUntil("#stop").css("background-color", "yellow");
+
+
+            // $("#siblings p").prev("#stop").css("background-color", "yellow");
+            // $("#siblings p").prevAll().css("background-color", "green");
+            var helo = $("#siblings #last").prevUntil("span").html()
+            $("body").append(helo+"<br>")
+
+        })
+    </script>
+
+</body>
+
+</html>

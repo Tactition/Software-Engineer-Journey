@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery slide methods</title>
+</head>
+
+<body>
+    <h1>Jquery slide methods</h1>
+
+    <p>there are 4 slide methods in jquery which are as </p>
+    <ul>
+        <li>SlideDown()</li>
+        <li>SlideUp()</li>
+        <li>SlideToggle()</li>
+    </ul>
+
+    <div style="width: 80%; background-color: red; padding: 20px 20px; margin: 0 auto;">
+        <h1>This is heading</h1>
+        <p>This is parahgraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur saepe quod amet.
+            Quis consectetur quas repellat sed! Dolore corrupti eum quae, explicabo distinctio consequatur unde odio
+            aspernatur facilis magnam saepe.</p>
+    </div>
+
+    <button id="SlideDown">SlideDown</button>
+    <button id="SlideUp">SlideUp</button>
+    <button id="SlideToggle">SlideToggle</button>
+
+
+
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(
+
+            function () {
+
+                $("#SlideUp").click(function () {
+                    $("div").slideUp();
+                })
+
+                $("#SlideDown").click(function () {
+                    $("div").slideDown();
+                })
+
+                $("#SlideToggle").click(function () {
+                    $("div").slideToggle();
+                })
+            }
+        )
+    </script>
+
+
+</body>
+
+</html>

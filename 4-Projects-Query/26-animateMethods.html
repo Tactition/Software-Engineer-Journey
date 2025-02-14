@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery animate method</title>
+</head>
+
+<body>
+
+    <p>In jquery we can animate any elemet of dom with aninmate method</p>
+    <p>To animate elements we can use animate method with some paramenters like
+        <code> animate({argument},speed,callback)</code>
+    </p>
+
+    <p>We can stop the animation which is ongoing with stop method by applying to animating element . if we have setted the multiple animataion methods you can use parameters inside the <code>stop(true,true) </code>mehtod to stop multiple animate methods </p>
+
+
+    <div style="width: 80%; background-color: red; padding: 8px 20px; margin: 0 auto; border-radius: 22px;">
+        <h1>This is heading</h1>
+        <p>This is parahgraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur saepe <br> Press me to stop animation while its ongoing</p>
+    </div>
+
+
+    <button id="animate">animate</button> <input type="button" value="stop">
+
+    <script src="jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("div").animate({
+                    width: "300px",
+                    height: "190px",
+                    fontSize: "19px",
+                    color:""
+                }, 2000, function () {
+                    alert("Size is shifted now")
+                })
+                // here this animate mothod syxtex is like 
+                // $("div").animate({css-argument},speed,callback)
+                // to prevent animation from taking place simultenously use the animate method in que(one after another)
+
+            });
+
+            $("input").click(function () {
+                $("div").stop();  // to stop the animation we use stop() method
+            })
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery position and offset</title>
+
+    <style>
+        .box {
+            height: 60px;
+            border: 1px solid black;
+            font-size: large;
+            padding: 14px;
+            color: #000dff;
+            background-color: bisque;
+            text-align: center;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <ul>
+            <li><b>Position():</b> position Means where is the elemet in the document like position from top and left .
+                position() works according to parent element(relative element) and provides the position according to
+                that element. it dosent include margin and padding while returning the content/elemnt position</li>
+
+            <br>
+
+            <li>
+                <b>Offset():</b> offset works according to document, means offset take the html document position and
+                gives the position of element according to its main(body) element.offset returns the position included
+                with gaps of paddings and margins.To set the position use <code> $(".box").offset({
+                    top: 0,
+                    left: 0
+                });</code>
+            </li>
+
+            <p><b>Note : </b><i>With position and offset method we can both set and get the position of element in the
+                    document</i></p>
+        </ul>
+
+        <div class="box">
+            <p>Hello i am text to check the working of offser</p>
+        </div>
+
+        <button id="positionGet">Position Get </button>
+        <button id="offsetGet">Offset Get</button>
+
+        <br><br>
+        <span>position method cant set position it only gets</span>
+        <button id="offsetSet">Offset Set</button>
+
+        <p id="result"></p>
+
+
+    </div>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(
+            function () {
+                $("#positionGet").click(function () {
+                    var pos = $(".box p").position();
+                    $("#result").append(pos.top + " px <br>" + pos.left + "px <br> <br>");
+                })
+
+                $("#offsetGet").click(function () {
+                    var pos = $(".box p").offset();
+                    $("#result").append(pos.top + " px <br>" + pos.left + "px <br>  <br>");
+                })
+
+                $("#offsetSet").click(function () {
+                    $(".box").offset({
+                        top: 0,
+                        left: 0
+                    });
+                });
+
+
+            }
+        )
+    </script>
+
+</body>
+
+</html>

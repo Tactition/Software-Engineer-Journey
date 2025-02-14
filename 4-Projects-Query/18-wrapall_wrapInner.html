@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wrap Inner and Wrap All</title>
+</head>
+
+<body>
+
+    <p>There are Methods in jQuery by which we can wrap text or enclose any element with other tags dynamically.</p>
+    <ul>
+        <li>wrapAll(): Wraps selected elements with a specified HTML structure.</li>
+        <li>wrapInner(): Wraps the content inside the selected element with another tag.</li>
+    </ul>
+
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio deleniti sed natus ea sunt veritatis.</p>
+
+    <button id="wrapAllBtn">Wrap All</button>
+    <button id="wrapInnerBtn">Wrap Inner</button>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Wrap all <p> elements inside a <div> when the first button is clicked
+            $("#wrapAllBtn").click(function () {
+                $("p").wrapAll("<div></div>"); // This will wrap all <p> elements into one <div>
+            });
+
+            // Wrap inner content of <li> elements with <i> tags when the second button is clicked
+            $("#wrapInnerBtn").click(function () {
+                $("li").wrapInner("<i></i>");
+            });
+        });
+    </script>
+
+</body>
+
+</html>

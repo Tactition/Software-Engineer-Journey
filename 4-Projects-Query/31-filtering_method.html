@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jQuery filtering</title>
+</head>
+
+<body>
+    <h4>Filtering Method</h4>
+    <p>In jquery if we wanna select any element in document or inside the container element with specificity .we use
+        filtering methods to select the element</p>
+    <ul>
+        <li>first()</li>
+        <li>last()</li>
+        <li>eq()</li>
+        <li>even()</li>
+        <li>odd()</li>
+        <li>not()</li>
+        <li>filter()</li>
+        <li>is()</li>
+        <li>slice</li>
+
+
+    </ul>
+
+
+    <div class="container">
+        <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae, blanditiis eveniet? Eveniet aliquid maxime
+            corrupti fuga sapiente, animi eius mollitia.</p>
+        <p>Deleniti ipsa libero assumenda et, quidem eum exercitationem natus rerum magnam minus soluta eligendi optio
+            quaerat error dignissimos pariatur necessitatibus.</p>
+        <p>Saepe officiis nihil doloribus ratione accusantium odio consectetur qui laborum voluptatem? Reiciendis,
+            illum? Corporis vitae ullam odit vel! Sequi, beatae.</p>
+        <p id="test">Nobis maxime sequi aliquam eligendi magni dolores voluptates sunt amet, porro ratione consequatur provident
+            doloribus eaque distinctio optio perspiciatis quae.</p>
+        <p>Eos ipsum ducimus autem sint cumque unde. Soluta iure fuga est eius, quas quia, repellat, distinctio
+            reiciendis vero hic ullam.</p>
+    </div>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(
+            function(){
+                // $(".container p").first().css("color","blue")
+                // $(".container p").last().css("fontSize","20px")
+                // $(".container p").eq(2).css("color","white")
+                // $(".container p").filter(":even").css("background-color","red");
+                // $(".container p").filter("#test").remove();
+                $(".container p").not("#test").css("color","blue");
+                // here in not() we specify to skip the elemetn with id #test .. so that it wont apply the css on that 
+
+                $(".container p").slice(2,5).css("background-color","yellow");
+            }
+        )
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Html Class</title>
+    <style>
+        .container {
+            border: 1px solid black;
+            padding: 10px;
+            width: 40px;
+            height: auto;
+
+        }
+
+        .highlight {
+            background-color: yellow;
+            color: red;
+            border: 1px solid rgb(17, 112, 255);
+            font-size: 22px;
+            width: 100px;
+
+        }
+
+        main {
+            display: flex;
+            flex-direction: row;
+            gap: 10px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>there are 3 Class methods in jquery</p>
+    <ul>
+        <li>addClass() method</li>
+        <li>removeClass() method</li>
+        <li>toggleClass() method</li>
+        <li>hasClass() method</li>
+
+    </ul>
+
+    <main>
+        <div id="div1" class="container">Div 1</div>
+        <div id="div2" class="container">Div 2</div>
+    </main>
+
+
+    <br>
+
+    <button id="addClassBtn">Add Class to Div 1</button>
+    <button id="removeClassBtn">Remove Class</button>
+    <button id="toggleClassBtn">Toggle Class</button>
+    <button id="hasClassBtn">Has Class</button>
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#addClassBtn").click(function () {
+                $("#div1").addClass("highlight")
+            })
+
+            $("#removeClassBtn").click(function () {
+                $("#div1").removeClass("highlight")
+            })
+
+            $("#toggleClassBtn").click(function () {
+                $("#div1").toggleClass("highlight")
+            })
+
+            $("#hasClassBtn").click(function () {
+                if ($('#div1').hasClass('highlight')) {
+                    alert('Element has the "active" class.');
+                } else {
+                    alert('Element does not have the "active" class.');
+                }
+
+            })
+
+            // We can also add multiple classes to the same element and remove multiple classes to diffrent elements by seperating it with comma Ie  $("#div1, #div2").addClass("highlight bg-red");
+
+
+
+        });
+
+    </script>
+
+</body>
+
+</html>

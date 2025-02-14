@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parent(ancestor)methods </title>
+    <style>
+        div {
+            width: 60%;
+            border: 1px solid black;
+            margin: 0 auto;
+            padding: 12px;
+            background-color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <p>there are selectors in jquery which are used to select the parent or grand parent elemnt of any element . they
+        are as </p>
+
+    <ul>
+        <li>Parent() : It  is used to select the parent element of any element</li>
+
+        <li>Parents() :this is used to select all the parents of any element.including the body (parents means all the previous element) </li>
+
+        <li>parentsUntil() : it is used to select the no of elements from div to its perticular parent to apply any method or effect </li>
+
+        <li>closest() : it checks if any of the parent in body has position relative if there is , then it will apply any method or effect to that element</li>
+
+        <li>offsetParent() : it will target the closest element which might be near to that perticular element by taking the target argunmernt in parenthesis <code> $("#siblings").closest("#parent").css("background","green")</code></li>
+    </ul>
+
+    <div id="grandParent">
+        <span>Grand Parent</span>
+
+        <div id="parent" style="position: relative;">
+            <span>Parent</span>
+
+            <div id="child">
+                <span>Child</span>
+                <div id="siblings">
+                    <p>siblings</p>
+                    <p>sec siblings</p>
+                    <p>third siblings</p>
+                </div>
+            </div>
+
+        </div>
+    </div>
+<script src="jquery.js"></script>
+<script>
+    $(document).ready(
+        function(){
+            // $("#siblings").parent().css("background","red")
+            // $("#siblings").parents().css("background","red")
+            // $("#siblings").parentsUntil("#grandParent").css("background","yellow")
+            // $("#siblings").offsetParent("#grandParent").css("background","green")
+            $("#siblings").closest("#parent").css("background","green")
+
+            // thsese methods effect the whole div like if it changes the color of anyone div  it will take effect of all the divs nested on that div..
+
+        }
+    )
+</script>
+
+</body>
+
+</html>

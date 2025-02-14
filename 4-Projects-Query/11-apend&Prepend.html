@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Append and Prepend</title>
+</head>
+
+<body>
+
+    <P>There are two Methods to insert any thing in html and Those are </P>
+
+
+    <ul>
+        <li>Append () method</li>
+        <li>Prepend () method</li>
+
+        <li>appendTo()</li>
+        <li>prependTo()</li>
+
+    </ul>
+
+    <ol>
+        <p>here everything will be inserted by appendTo and prependTo <Br>
+             In <B>prepend</B> and prependto there is only one diffrence that is in prepend we first select the element and then we add the content like this <br><code>$("#select element").append(<"tag here">addded content<"tag clos here>")</code> </p>
+
+        <p>but In appendto we first add the content and then select the element</p>
+
+    </ol>
+
+    <button id="apend">Append in last</button>
+    <button id="prepend">Prepend in First</button>
+
+    <button id="apendto">appendTo</button> <button id="prependto">prependTo</button>
+
+    <script src="jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $("#apend").click(function () {
+
+                $("ul").append("<li>I am appended</>")
+            })
+
+
+            $("#prepend").click(function () {
+
+                $("ul").prepend("<li>I am Prepended</li>")
+            })
+
+            $("#apendto").click(function () {
+
+                $("<li>i Must be appended</li>").appendTo("ol")
+            })
+
+            $("#prependto").click(function () {
+
+                $("<li>i Must be prepended</li>").prependTo("ol")
+            })
+
+
+        });
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get Metods</title>
+</head>
+
+<body>
+    <p id="a">Hello i am Form And iwill teach You how to use Get Metods</p>
+    <span>There are 4 types of Get methods in Jquery</span> <br />
+    <ul>
+        <li>1) val() : we can use val() for both to get val method and to Set Value method</li>
+        <li>2) text()</li>
+        <li>3) html()</li>
+        <li>4) attr()</li>
+    </ul>
+
+    // make a basic 4 input form to learn jwuery form events
+    <form>
+        <input type="text" id="name" placeholder="name">
+        <input type="text" id="email" placeholder="email">
+        <input type="text" id="phone" placeholder="phone" />
+        <select id="contry">
+            <option value="zahid">zahid</option>
+            <option value="abrar">abrar</option>
+        </select>
+        <button>Submit</button>
+    </form>
+
+
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $("form").submit(function () {
+                console.log("form submitted");
+                var name = $("#name").val();
+                var email = $("#email").val();
+                var phone = $("#phone").val();
+                var contry = $("#contry").val();
+
+                console.log("Helo" + " " + name + " welocme To Jquery" + " your Email is " + email + "your phone is " + phone + "your contry is " + contry);
+
+                return false;
+
+            })
+
+        });
+    </script>
+</body>
+
+</html>

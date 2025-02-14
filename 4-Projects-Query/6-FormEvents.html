@@ -1,0 +1,53 @@
+// make a basic html form to learn jwuery form events
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form events</title>
+</head>
+
+<body>
+
+    <form>
+        <input type="text" id="name" placeholder="name">
+        <input type="text" id="email" placeholder="email">
+        <input type="text" id="phone" placeholder="phone" />
+        <select id="contry">
+            <option value="zahid">zahid</option>
+            <option value="abrar">abrar</option>
+        </select>
+
+
+        <button>Submit</button>
+    </form>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#name").focus(function () {
+                $(this).css("background-color", "yellow");
+            })
+
+            $("#name").blur(function () {
+                $(this).css("background-color", "inherit");
+            })
+
+            $("#contry").change(function () {
+                $(this).css("color", "green");
+          $(this).css("font-size", "20px");
+            })
+
+            $("form").submit(function () {
+          alert("form submitted");
+            })
+
+            
+        });
+    </script>
+
+</body>
+
+</html>

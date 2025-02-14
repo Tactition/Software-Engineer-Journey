@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>On&Off</title>
+    <style>
+        .box {
+            margin: 0 auto;
+            width: 100px;
+            height: 100px;
+            background-color: red;
+            border: 2px dashed #000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <p>On and off method jquery</p>
+
+    <ul>
+        <li>on() method</li>
+        <li>off() method</li>
+    </ul>
+
+    <p>In on() method we define the multiple event methods for a single element, so that we dont have to call the same
+        element multiple times ie :</p>
+
+
+    <div class="box"></div>
+    <button>Remove Events mouseOver</button>
+
+
+
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+
+            $(".box").on({
+                mouseenter: function () {
+                    $(this).css({border:"solid green"})
+                },
+                mouseleave: function () {
+                    $(this).css({border:"inherit"})
+                },
+                click: function(){
+                    $(this).css("backgroundColor","blue")
+                }
+            })
+
+            $("button").click(function () {
+                $(".box").off("click")
+            })
+
+
+
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>scroll top and left</title>
+</head>
+<body>
+    <p>there are methods in jqury methods by which we can set or get the scroll value of windows or any div or element</p>
+
+    <ul>
+        <li>scrollTop() : it returns the scroll value of scrollbar from top to its current position </li>
+        <li>scrollLeft() : it returns the scroll value of scrollbar from left to its current position</li>
+    </ul>
+    <span> these can be used in any div or element and can be used for both setting or getting the scroll value</span>
+
+    <div class="box">
+        
+        <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod labore commodi placeat, laboriosam autem recusandae nemo eaque ea! Fuga voluptatum eum sint officiis deleniti beatae atque ipsam cumque odit eos. Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nemo, delectus magni? Numquam similique sequi voluptate labore quam? Cupiditate numquam accusamus laborum similique quia nisi libero ea aperiam! Qui praesentium quisquam tempora iure fugiat non id dolorum. A accusantium voluptatem est minima earum quibusdam animi quis sed molestiae tempora in sint sit, incidunt consectetur facilis nulla laboriosam suscipit molestias ad non ducimus et? Labore explicabo autem aperiam praesentium enim, quasi nemo similique itaque dolore ducimus expedita omnis ipsa eius deserunt quia ut quo? Voluptatem impedit perferendis expedita porro quisquam debitis magni, omnis aliquam nisi velit laborum beatae maxime blanditiis minima illum quidem sequi recusandae. Pariatur ullam repellendus provident debitis molestias nobis. Natus, aut! Repellendus incidunt minima sequi minus consectetur obcaecati at debitis dolorum dolores amet a enim magnam cumque, fugiat alias? Laudantium sapiente blanditiis distinctio quibusdam dolore, asperiores quia soluta repellendus ex cupiditate aperiam quae voluptatum ducimus nam, nihil molestiae quidem. Beatae deserunt itaque nisi cumque ad laborum cupiditate hic illo, doloribus molestiae sapiente facere animi nesciunt, nihil dolores perferendis, ab sit. Similique tempore vero rem vel! Explicabo laborum perspiciatis pariatur aliquid ad illo, reiciendis, hic voluptatibus aut tenetur blanditiis minus culpa aliquam ex nisi consequatur alias magni a qui deserunt.</p>
+        
+    </div>
+
+    <button id="scroll">scroll</button>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(window).scroll(function(){
+                console.clear()
+                console.log($(window).scrollTop())  // here we are getting the values of current scroll 
+                console.log($(window).scrollLeft()) // in console tab. for both left and right values 
+            })
+
+            $("#scroll").click(function(){
+                $(window).scrollTop(0); // here we are stting the values of scrolbar to top at 0px
+            });
+        })
+    </script>
+</body>
+</html>

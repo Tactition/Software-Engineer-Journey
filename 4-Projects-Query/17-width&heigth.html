@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery Width and heigth methods</title>
+
+    <style>
+        .box{
+            background-color: #43474f;
+            border: 10px solid #000;
+            padding: 0px;
+            box-sizing: border-box;
+            margin: 0px auto;
+            color: wheat;
+            font-size: 20px;
+            font-family: sans-serif;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="box">
+        <p>In jquery there are preDefined Methods for Getting and Setting the Width and Height of Element :- Not only height and width but setting the height & Width of each segement of container</p>
+        <table border="1" width="100%">
+            <tr>
+                <td>width()</td>
+                <td>height()</td>
+            </tr>
+            <tr>
+                <td>InnerWidth()</td>
+                <td>InnerHeight()</td>
+            </tr>
+            <tr></tr>
+                <td>outerWidth()</td>
+                <td>outerHeight()</td>
+            </tr>
+            <tr>
+                <td>outerWidth(true)</td>
+                <td>outerHeight(true)</td>
+            </tr>
+        </table>
+    </div>
+
+    <button id="set">Set</button>
+    <button id="get">Get</button>
+
+    <ul>
+        <li><b>width() </b>: this method is used for both setting and getting the width of any element content or we can use to set width of any element</li> <br>
+        <li><b>innerWidth()</b> : this method is used for getting and setting the inner width of any element </li> 
+        <br>
+        <li><b>outerWidth() </b> : this is used to get the outer width of any element with padding and border </li>
+        <br>
+        <li><b>outerWidth(true)</b> : this is used get the whole widh of container including the padding and border and margin</li>
+    </ul>
+
+    <div class="result">
+       
+    </div>
+
+    <script src="jquery.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $("#get").click(function(){
+                var width = $(".box").width();
+                $(".result").append("width : "+width +" px <br> ")
+
+                const height = $(".box").height();
+                $(".result").append("height : "+height+" px <br>")
+            })
+
+            $("#set").click(function(){
+                $(".box").height("400px")
+            })
+
+
+        });
+
+
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Replace Methods</title>
+    <style>
+        .container {
+            width: 400px;
+            background-color: #ffde83;
+            border: 2px dashed #000;
+            padding: 12px;
+            box-sizing: border-box;
+            color: #000000;
+            font-family: serif;
+        }
+    </style>
+
+</head>
+
+<body>
+    <p>There are two Methods to replace any thing in html <br>
+    <ul>
+        <li>replaceall() method : in this method we can replace all the element with anoy other specific element </li>
+        <li>replaceWith() method : in this first we dont use selector firs <code> $(".container") </code>but we define what we want to replace like <code>$(<span>click here</span>).replaceWith("<span>Don't Click here</span>")</code> </li>
+    </ul>
+    </p>
+
+    <div class="container">
+        <h2>I am heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugit at explicabo doloribus sequi fuga animi ipsam
+            consequuntur accusamus obcaecati.</p>
+
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+
+
+    <script src="jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            // add click fuction on container element
+            $(".container").click(function () {
+                $(".container p").replaceWith("<p>hekii</P>");
+                // $("<p>hekii</P>").replaceAll(".container p"); 
+            }) 
+
+            $("body").append("Click on box");
+
+        });
+
+    </script>
+</body>
+
+</html>

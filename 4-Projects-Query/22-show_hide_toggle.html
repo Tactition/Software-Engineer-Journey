@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>show hide toggle methods In Jquery</title>
+
+</head>
+
+<body>
+
+    <p>there are three methods in jquery <br>
+        1) show() : it sets the elememnt css property too block <br>
+        2) hide() : it sets the elememnt css property too none <br>
+        3) toggle() : it sets the elememnt css property too block or none accordingly   <br>
+
+        note : these methods also take the speed argument in parenthesis to set the speed of the animation like slow or fast or in miliseconds like toggle(100)
+    </p>
+
+
+    <button>Click</button>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").toggle("slow");
+            })
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p>Methods chainning : In channing method we chain multiple methods to reduce the Quaantity of code </p>
+    <div style="width: 80%; background-color: red; padding: 8px 20px; margin: 0 auto; border-radius: 22px;">
+        <h1>This is heading</h1>
+        <p>This box will first change its color first and then ot will increase its width and will the fade off</p>
+    </div>
+
+
+    <button >continue</button> <input type="button" value="stop">
+
+    <script src="jquery.js"></script>
+    <script>
+
+        $(document).ready(
+            function(){
+                $("button").click(function(){
+                    $("div").css("backgroundColor","Green").animate({
+                        width:"300px"
+                    },1200).fadeOut().fadeIn("slow")
+                })
+            }
+        )
+
+    </script>
+</body>
+</html>

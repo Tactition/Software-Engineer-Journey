@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .outer-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* Center items vertically */
+            width: 80%;
+            height: 200px;
+            background-color: #ccc;
+            border: 1px solid #000;
+            padding: 10px;
+            margin: 0 auto;
+        }
+
+        .inner-box,
+        .inner-inner-box,
+        .inner-inner-inner-box {
+            width: 80%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            /* Make them fill the parent container */
+            /* height: 100%; */
+            background-color: #aaa;
+            /* Adjust colors as needed */
+            border: 1px solid #000;
+            padding: 10px;
+        }
+    </style>
+
+    <title>Decendents</title>
+</head>
+
+<body>
+    <div class="outer-box">
+        <span>outer box</span>
+        <div class="inner-box"> 
+
+            <span>inner box</span>
+            <div class="inner-inner-box">
+                <span>inner inner box</span>
+                <div class="inner-inner-inner-box">
+                    <span>inner inner inner box</span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <p>there are two methods in jquery to select ther childrens of any element or targret any element which are as</p>
+    <ul>
+        <li>children() : it selects or returns all the childrens of parent element</li>
+        <li>find() : it select or return those element which are given in argunmernt/parenthesis of find() method but only if the argunmernt is valid.and in argunmernt we can specife either class ,id , tagname </li>
+    </ul>
+
+    <script src="jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $(".inner-inner-box").find('.inner-inner-inner-box').css("background-color", "red");
+        })
+
+    </script>
+</body>
+
+</html>

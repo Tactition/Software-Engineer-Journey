@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>after and before</title>
+
+    <style>
+        .demobox {
+            width: 120px;
+            height: 120px;
+            border: 3px groove black;
+            background: bisque;
+        }
+    </style>
+
+</head>
+
+<body>
+
+
+    <div id="box">
+        <p>There are two methods to set any thing outside the html tag and those are</p>
+        <ul>
+            <li>Before method()</li>
+            <li>After method()</li>
+        </ul>
+
+        <div class="demobox">
+
+        </div>
+
+
+        <button id="before">Before</button>
+        <button id="after">After</button>
+
+    </div>
+
+    <script src="jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+
+            $("#after").click(function () {
+
+                $(".demobox").after("after method");
+            })
+
+            $("#before").click(function () {
+
+                $(".demobox").before("before method");
+            })
+
+        })
+
+    </script>
+</body>
+
+</html>

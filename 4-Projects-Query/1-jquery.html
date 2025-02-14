@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>basic Jquery</title>
+  <script src="jquery.js"></script>
+</head>
+
+<body>
+
+  <img src="image.jpg" alt="image tag">
+  <button>Press Me</button>
+
+
+  <script>
+
+    $(document).ready(function () {  // in this " $(document)" is a access specifier and "ready" us method which is used to execute the code when documen is ready
+
+      $("button").click(function () {  // here we select button with access specifier and click us method which is used to execute the code when button is clicked
+
+        $("img").toggle(1000, function () {  // here we also used the access specifier to sellect image and dused togle funtion which hides or unhides the imgae when clicked  
+          // callback function here .. means in every method parenthesis we can set call back function which will be executed after the method is executed like printing message of work done when completion og any task ..
+        });
+      })
+      
+    })
+
+  </script>
+
+</body>
+
+</html>

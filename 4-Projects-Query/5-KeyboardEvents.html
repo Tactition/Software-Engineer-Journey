@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Keyboard events</title>
+</head>
+
+<body>
+
+    <p>heloo i am keyperss</p>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).keypress(function () {
+            if (event.which == 13) { // 13 is the enter key and if we press enter key it will execute
+                alert("You pressed enter key");
+            }
+        });
+
+        $(document).keypress(function () {
+            $("body").css("background", "orange");
+        });
+
+
+    </script>
+</body>
+
+</html>

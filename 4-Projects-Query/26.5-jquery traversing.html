@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>jquery traversing</title>
+</head>
+
+<body>
+    <h1>jquery traversing</h1>
+    <p>jquery traversing means selection of elements of dom based on their placing by the predefind methods of jquery.it
+        is done by selecting the element and then navigating to Required element with help of that element <br>
+        jQuery traversing, which means "move through", are used to "find" (or select) HTML elements based on their
+        relation to other elements. Start with one selection and move through that selection until you reach the
+        elements you desire.
+    </p>
+
+    <p><b>Methods to Reach the Required Element By traversing from a perticular element.</b> image below illustrates an
+        HTML page as a tree (DOM tree). With jQuery traversing, you can easily move up (ancestors), down (descendants)
+        and sideways (siblings) in the tree, starting from the selected (current) element. This movement is called
+        traversing - or moving through - the DOM tree.</p>
+    <center>
+        <img src="https://www.w3schools.com/jquery/img_travtree.png">
+    </center>
+    <p>There are 4 methods of traversing</p>
+    <ul>
+        <li> <b>ancestors method</b> :apply the style By navigating with or selecting with the parent element of the currently
+            selected elements. we can apply styles, attributes, or other actions to an element's parent with methods
+            like
+
+            <ol>
+                <li>Parent() : It is used to select the parent element of any element</li>
+
+                <li>Parents() :this is used to select all the parents of any element.including the body (parents means
+                    all the previous element) </li>
+
+                <li>parentsUntil() : it is used to select the no of elements from div to its perticular parent to apply
+                    any method or effect </li>
+
+                <li>closest() : it checks if any of the parent in body has position relative if there is , then it will
+                    apply any method or effect to that element</li>
+
+                <li>offsetParent() : it will target the closest element which might be near to that perticular element
+                    by taking the target argunmernt in parenthesis
+                    <code> $("#siblings").closest("#parent").css("background","green")</code></li>
+            </ol>
+
+        </li>
+
+        <li> <b>Decendents method </b>: in jquery if we wanna navigate and apply the syle or any action to downward hiearchy or child elemets of perticular or selected element we use methods like 
+            <ol>
+                <li>children() : it selects or returns all the childrens of parent element</li>
+                <li>find() : it select or return those element which are given in argunmernt/parenthesis of find() method but only if the argunmernt is valid.and in argunmernt we can specife either class ,id , tagname </li>
+            </ol>
+        </li>
+
+        <li>
+            <b>Sibling method </b>: these are the methods which are use Used to Select the Same siblings of container or it returns the siblings of any elemnent covered in container
+
+            <ol>
+                <li>siblings() : it returns all the sibling elements of selected element</li>
+
+                <li>next() : it returns the next Sibling Element of the ssleected element </li>
+                <li>nextAll() : it returns the all the siblings elemnts followed after selected element</li>
+                <li>nextUntil() : It returns or selects all the sibling element untill any given parameter in parenthesis like <code>nextUntil("#sec-last")</code></li>
+
+                <li>prev() : slect the previous element of selected element</li>
+                <li>prevAll() select all previous elements of selected Element</li>
+                <li>prevUntil() : It returns or selects all the previous sibling element untill any given parameter in parenthesis like <code>prevUntil("#sec-last")</code></li>
+                
+            </ol>
+        </li>
+
+        <li>
+            <b>Filtering Methods ()</b>: jquery provides the methods to Select the Elements from the container containing the elements of Dom. these methods are used to find elements based on Conditions like class content and id. these are some of the Filtering methods
+            <ol>
+                <li>first() : it will return the first element of container containing elements</li>
+                <li>last() : it will return the last element of container containing elements</li>
+                <li>eq() : it will return the element based on the indexing cumber passed in arguments like <code>eq(0)</code></li>
+                <li>filter() : method lets you specify a criteria or condition. Elements that do not match the criteria/condition are removed from the selection, and those that match will be returned.</li>
+                <li>not() : it returns all the elements without the specific element defined in arguments like not(".mid-elemt")</li>
+                <li>slice() : it returns a slice or porition of elements from the container based on the passed arguments like <code>slice(2,5) : which means select all the element from 2 indexing no to 5 indexing no </code></li>
+            </ol>
+        </li>
+
+    </ul>
+
+
+</body>
+
+</html>

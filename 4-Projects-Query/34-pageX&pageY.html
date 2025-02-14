@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PageX and PageY</title>
+
+    <style>
+        .container{
+            width: 400px;
+            height: 400px;
+            background-color: #ffde83;
+            border: 2px dashed #000;
+            padding: 12px;
+            box-sizing: border-box;
+            color: #000000;
+            font-family: serif;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="container">
+        <p>PageX and PageY</p>
+        
+    </div>
+
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(".container").mousemove(function(event){
+                $("p").text("PageX : "+event.pageX+" PageY : "+event.pageY); 
+            })
+        })
+    </script>
+
+</body>
+</html>

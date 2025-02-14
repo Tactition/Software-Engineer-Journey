@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>jQuery topic css</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  </head>
+
+  <body>
+    <button>Click</button>
+
+    <script>
+      $(document).ready(function () {
+        $("button").click(function () {
+          $(this).css({
+            color: "White",
+            "background-color": "red",
+            border: "none",
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

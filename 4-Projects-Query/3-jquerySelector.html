@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery selecotr</title>
+</head>
+
+<body>
+
+    <p>Heloo i am line </p>
+
+
+    <script src="jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("p").click(function () {  // here "p" is selector and click is method which is used to execute the code when button is clicked / we can use many selectors like class N id selectors 
+                $("p").html("Hello i am paragraph");
+            })
+        });
+    </script>
+
+</body>
+
+</html>

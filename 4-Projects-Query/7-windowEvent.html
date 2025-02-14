@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>window event</title>
+
+</head>
+
+<body>
+
+    <div style="height: 110vh;">
+        <p>Window events</p> 
+        // there are two window events in jquery <br>
+        // 1) load <br />
+        // 2) unload<br>
+        <br>
+      // the upper window events are deprecated <br />
+      <br />
+
+        // 3) resize
+        // 4) scroll
+
+        <br />
+        <br />
+
+        Only these are working.
+
+
+
+    </div>
+
+
+    <script src="jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            window.onresize = function () {
+                console.log("Window is resized");
+            }
+
+            window.onscroll = function () {
+                console.log("Window is scrolled");
+            };
+        });
+
+
+
+
+
+
+    </script>
+
+
+</body>
+
+</html>

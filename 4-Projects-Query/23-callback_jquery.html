@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>call back function in jquery</title>
+</head>
+
+<body>
+
+    <h1>call back function in jquery</h1>
+
+    <button>Toggle heading</button>
+    <script src="jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("h1").toggle("slow", function(){
+                    alert("changed");
+                });
+            });
+        });
+
+    </script>
+</body>
+
+</html>

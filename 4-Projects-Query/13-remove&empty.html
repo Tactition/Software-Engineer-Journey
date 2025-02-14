@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>remove and empty</title>
+    
+    <style>
+        .box{
+            width: 400px;
+            background-color: rgb(49, 135, 201);
+            border: 2px dashed #000;
+            padding: 12px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            color: wheat;
+        }
+    </style>
+</head>
+<body>
+    <p>There are two methods in jquery to remove or empty in content of div or other elements</p>
+
+    <ul>
+        <li>remove()</li>
+        <li>empty()</li>
+    </ul>
+
+    <div class="box" >
+        <h2>I am heading </h2>
+        <hr>
+        <p>I am the content of box. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Distinctio, vitae! Expedita autem est esse reiciendis at repudiandae sint inventore sequi ea vero!</p>
+
+        <button id="btn1">Remove content</button> <button id="btn2">empty heading</button> <button id="btn3">get back the content</button>
+    </div>
+
+
+    <script src="jquery.js"></script>
+    <script>
+
+        $(document).ready(function(){
+
+            $("#btn1").click(function(){
+                $("h2,p").remove();
+                $(".box").prepend("Content removed and i got inserted")
+            })
+
+            $("#btn2").click(function(){
+                $("h2").empty();
+                $("h2").html("Heading removed and brand New headinf inserted")
+            })
+
+            $("#btn3").click(function(){
+                location.reload()
+            })
+
+        })
+
+    </script>
+
+</body>
+</html>

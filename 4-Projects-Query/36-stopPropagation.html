@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>stopPropagationx</title>
+
+    <style>
+        .container {
+            width: 400px;
+            background-color: #ffde83;
+            border: 2px dashed #000;
+            padding: 12px;
+            box-sizing: border-box;
+            color: #000000;
+            font-family: serif;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <p> <code>stopPropagation()</code> method is used to stop the event bubbling in the container.where multiple elements are nested inside each other and while clicking on child element the event for both the child and parent gets triggered.. this is called event bubbling  <br>
+    
+        it helps us to disable the event propagatation on other nested or child elements when clicked on target element
+
+        <br>
+
+        <code>isPropagationStopped()</code> : is the method which is used to check weather the propagation is stopped by the stopPropagation() Method
+    </p>
+
+    <div class="container">
+        <p>computer applications : fundamentals of computer - generation  applied computing and digigtal and tech solutions and history 
+
+        document and fillim making
+
+        history.
+
+        commmunication skills 
+
+        </p>
+
+        data communication and computers networks :  
+
+        Dbms :
+
+        ops with C++ 
+
+        computing mathamatics 
+
+        operating system 
+
+        <button>Chlick here</button>
+
+    </div>
+
+    <script src="jquery.js"></script>
+    <script>
+
+        $(document).ready(function () {
+            $(".container").click(function () {
+                alert("You clicked in div container")
+            })
+
+            $("p").click(function () {
+                alert("You clicked in div p")
+            })
+
+            $("button").click(function (e) {
+                e.stopPropagation();
+                alert("You clicked in button")
+            })
+
+        })
+    </script>
+
+</body>
+
+</html>

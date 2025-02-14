@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jquery fade methods</title>
+</head>
+<body>
+    <h1>Jquery fade methods</h1>
+    <p>there are 4 fade methods in jquery which are as </p>
+    <ul>
+        <li>FadeIn() : it will make the element visible </li>
+        <li>FadeOut()</li>
+        <li>FadeToggle()</li>
+        <li>FadeTo()</li>
+    </ul>
+
+    <div style="width: 80%; background-color: red; padding: 20px 20px; margin: 0 auto;">
+    <h1>This is heading</h1>
+    <p>This is parahgraph Lorem ipsum dolor, sit amet consectetur adipisicing elit. Consequatur saepe quod amet. Quis consectetur quas repellat sed! Dolore corrupti eum quae, explicabo distinctio consequatur unde odio aspernatur facilis magnam saepe.</p>
+    </div>
+
+    <br>
+
+    <button id="fadeIn">FadeIn</button> <button id="fadeOut">FadeOut</button> <button id="fadeToggle">FadeToggle</buttonm> <button id="fadeTo">FadeTo</button> <button id="fadeto">fadeTo</button>
+
+    <script src="jquery.js"></script>
+    <script>
+        $(document).ready(
+            function(){
+                $("#fadeOut").click(function(){
+                    $("div").fadeOut();
+                })
+
+                $("#fadeIn").click(function(){
+                    $("div").fadeIn();
+                })
+
+                $("#fadeToggle").click(function(){
+                    $("div").fadeToggle();
+                })
+
+                $("#fadeto").click(function(){
+                    $("div").fadeTo("slow",0.2);
+                    // fadeto("speed",opacity,callback) it takes 3 arguments
+                    // 1. speed  : for the speed of the animation
+                    // 2. opacity :: how much fade the selcted element should be
+                    // 3. callback  ;; what should be done after the animation is done
+
+                });
+
+            }
+            
+        )
+    </script>
+</body>
+</html>
