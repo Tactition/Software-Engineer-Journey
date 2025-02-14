@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BootStrap 4</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+</head>
+
+<body>
+
+
+    <div class="container m-4">
+
+        <div class="input-group">
+            <input type="text" name="input" id="input" class="form-control" placeholder="Search">
+            <div class="input-group-apend">
+                <button type="submit" id="search" class="btn btn-primary">Search</button>
+            </div>
+        </div>
+
+        <ul class="list-group">'
+            <li class="list-group-item">Html</li>
+            <li class="list-group-item">Css</li>
+            <li class="list-group-item">Javascript</li>
+            <li class="list-group-item">Jquery</li>
+            <li class="list-group-item">Bootstrap</li>
+            <li class="list-group-item">Angular</li>
+            <li class="list-group-item">React</li>
+            <li class="list-group-item">Vue</li>
+            <li class="list-group-item">Node</li>
+            <li class="list-group-item">MongoDB</li>
+        </ul>
+
+    </div>
+
+
+    
+    <script src="js/jquery.slim.min.js"></script>
+    <script src="js/bootstrap.js"></script>
+    <script src="js/popper.min.js"></script>
+
+
+    <script>
+
+        $(document).ready(function () {
+            $("#search").click(function () {
+                var value = $("input").val().toLowerCase();
+
+                $("li").each(function () {
+
+                    console.log($(this).html().toLowerCase());
+
+                    if ( $(this).html().toLowerCase().indexOf(value) !== -1 ) {
+
+                        $(this).show();
+                    }
+                    else {
+                        $(this).hide();
+                    }
+                })
+            })
+        });
+
+    </script>
+</body>
+
+</html>
