@@ -1,0 +1,53 @@
+[
+    {
+        "country": "India",
+        "country_code": 91,
+        "states": [
+            { "state_name": "Maharashtra" },
+            { "state_name": "Karnataka" },
+            { "state_name": "Tamil Nadu" },
+            { "state_name": "Uttar Pradesh" }
+        ]
+    },
+    
+    {
+        "country": "United States",
+        "country_code": 1,
+        "states": [
+            { "state_name": "California" },
+            { "state_name": "Texas" },
+            { "state_name": "Florida" },
+            { "state_name": "New York" }
+        ]
+    },
+    {
+        "country": "Canada",
+        "country_code": 1,
+        "states": [
+            { "state_name": "Ontario" },
+            { "state_name": "Quebec" },
+            { "state_name": "British Columbia" },
+            { "state_name": "Alberta" }
+        ]
+    },
+    {
+        "country": "Australia",
+        "country_code": 61,
+        "states": [
+            { "state_name": "New South Wales" },
+            { "state_name": "Victoria" },
+            { "state_name": "Queensland" },
+            { "state_name": "Western Australia" }
+        ]
+    },
+    {
+        "country": "Germany",
+        "country_code": 49,
+        "states": [
+            { "state_name": "Bavaria" },
+            { "state_name": "Berlin" },
+            { "state_name": "Hamburg" },
+            { "state_name": "Saxony" }
+        ]
+    }
+]

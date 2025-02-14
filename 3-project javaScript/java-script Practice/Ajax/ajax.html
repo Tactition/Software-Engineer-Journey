@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ajax</title>
+</head>
+
+<body>
+
+    <pre>
+    AJAX = Asyncronous js and Xml technologie (not programming language)
+
+    Asyncronous : js code which dont runs line by line
+
+    xml: extensible markup Language : it also has tag system .. and it is used to send or receive the data 
+
+    in modern world if we want to retrive the data or send the data we use json and xml to send and recieve the data in background or forground with any user interection (click) 
+
+    request : we request from our end means browser or client end . (when we request object is created and requst is assembled in object formate . either browser will document in xml or json )
+
+    Response : what result we will get from the initiated request is called as response .
+
+
+    <b>how request works</b> : when a browser types any query or request anything from server. its is converted to object and then transfered to server in object form. 
+
+    <U>Client requst : converted into object  </U> --- <u>Sended to server(Process and create Response ) </u> and --  <u>returns the Response</u> 
+
+    while sending and recieving response request goes through levels like 
+
+    0: under Process goinng 
+    1: connection establised (browser to server connectionn)
+    2: request sent to server
+    3: server process the request and create response
+    4: response sent to browser
+
+    <b>Ajax method</b>
+     1. new XMLhttpRequest ();
+     2. Events : onreadystatechange 
+
+     3. Property : <b> readyState</b>(weather connection is establised or not) ,<b>Status</b> (weather file is their in server or not it returns 200 for success and 404 for failture:
+     these codes are called as status codes)
+     , <b>Statustext</b>( it returns connection result like ok or not found),<b>Response </b>(it give the response got from the ajax request mainly in files not in test ) ,
+    <b>ResponseText</b>(gives the response in text) 
+
+     2. Method ; open (method, url, async, user, password) : it always give result in binary and if we wanna 
+     change the response result.. we can do that by <b>responseType= blob</b> before the event on ready state change 
+
+    <p id="response" onclick="request()"> "Here is the response" Click Me  </p>
+
+    <video src="" id="player" width="720" style="border: 1px solid black;" controls></video>
+
+
+ </pre>
+
+
+    <script>
+
+        var player = document.querySelector("#player");
+        var response = document.querySelector("#response");
+
+        function request() {
+
+            var request = new XMLHttpRequest();
+            var text = new XMLHttpRequest();
+
+            request.open("POST", "video.mp4", true);
+            request.responseType ="blob";
+            request.send();
+
+            text.open("POST", "update-response.txt", true);
+            text.send();
+
+            request.onreadystatechange = function () {
+                if (request.readyState == 4) {
+
+                    if (request.status == 200) {
+                        // this is responsse
+                        var url = URL.createObjectURL(request.response);
+
+                        player.src = url
+                    }
+                    else if (request.status == 404) {
+                        alert("no data found")
+                    }
+
+                }
+            }
+
+            text.onreadystatechange = function(){
+                if(text.status == 200){
+                    response.innerHTML = text.responseText;
+                }
+                else if (text.status ==404){
+                    console.log("no data found");
+                }
+            }
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>

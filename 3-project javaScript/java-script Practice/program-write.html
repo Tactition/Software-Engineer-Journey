@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+</head>
+<body>
+ <h1>write a program to call alert on mouse Event</h1>
+ <button onclick="mow()">Onclick</button>
+ <button onmouseover="mow()">OnMouse over</button>
+ <button onmouseout="mow()">onmouseout</button>
+
+ <h2>clixk here to close page</h2>
+ <button onclick="window.close()">Press me to close page </button>
+
+ <h3>This will open video</h3>
+<button onclick="window.open('video.mp4')">open vide</button>
+
+
+<h3>This will open print this page function</h3>
+<button onclick="window.print()">open print</button>
+
+<script>
+ function mow(){
+  window.alert("hello im bcz of mouse event");
+ }
+</script>
+</body>
+</html>

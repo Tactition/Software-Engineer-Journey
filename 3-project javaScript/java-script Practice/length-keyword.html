@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Length Checker</title>
+
+    <style>
+        form {
+            margin: 20px;
+            width: fit-content;
+            padding: 20px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            margin:20px auto
+        }
+    
+        input {
+            width: 200px;
+            padding: 10px;
+            margin-bottom: 10px;
+            float: left;
+        }
+    
+        button {
+            padding: 10px 20px;
+            background-color: #007bff;
+            color: #fff;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 0 20px;
+           
+        }
+    </style>
+
+</head>
+<body>
+    <form action="">
+        <input type="text" id="text" placeholder="type to count length">
+        <button onclick="return measure()">Measure</button>
+        <p id="result"></p>
+    </form>
+
+    <script>
+        function measure(){
+            var txt = document.getElementById("text").value;
+            var len = txt.length;
+            document.getElementById("result").innerHTML = len;
+            return false;
+
+        }
+
+    </script>
+
+</body>
+</html>

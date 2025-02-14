@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>glowing Effect</title>
+</head>
+<style>
+div{
+ width: 100%;
+ height: 70px;
+ border: 1px solid red;
+}
+h1{
+ text-align: center;
+ font-family: sans-serif;
+margin: 18px;
+text-transform:capitalize;
+ content:"";
+}
+button{
+  width: 120px;
+  height: 60px;
+  display: block;
+  margin:0 auto;
+  background-color: orangered;
+  border: none;
+  border-radius: 12px;
+} 
+</style>
+<body>
+ 
+<div id="glow">
+<h1 id="me">I Wanna Glow</h1><br>
+<button onclick="press()">Turn On Glow</button>
+</div>
+
+<script>
+var f =document.getElementById("me");
+function press(){
+ var x = document.getElementById("glow");
+ x.style.backgroundColor="yellow";
+ document.getElementById("me").style.color="blue";
+ f.style.fontFamily="arial";
+ document.getElementById("me").innerHTML="I am Happy Now";
+
+
+}
+
+
+</script>
+</body>
+</html>
+
+

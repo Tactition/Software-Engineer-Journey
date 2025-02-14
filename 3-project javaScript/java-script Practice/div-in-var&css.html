@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Document</title>
+
+ <style>
+  .main {
+   text-align: center;
+  }
+
+  .marq {
+   padding-top: 30px;
+   padding-bottom: 30px;
+  }
+ </style>
+
+
+</head>
+
+
+ <button onclick="wap()">Click to Show Text</button>
+ <button onclick="color()">Click to change Text color</button>
+
+
+ <button onclick="close()">close</button>
+
+ <h1 id="result"></h1>
+
+ <p>this div will be styled by java script</p>
+
+ <div id="new">
+  <p id="para"></p>
+ </div>
+
+ <button onclick="mas()">inside box without variable</button>
+
+ <button onclick="ins()">inside box with variable</button>
+
+ <button onclick="divi()">div styling</button>
+
+
+
+ <!-- end of code -->
+
+ <script>
+
+
+
+function wap() {
+    var x = document.getElementById("result");   
+    x.innerHTML="i am written by java script";
+  }
+
+function color(){
+  document.getElementById("result").style.color ="red";     // styleing with selector only 
+}  
+
+// tihis is div 
+
+function divi(){
+ var x = document.getElementById("new");
+ x.style.width="200px";     
+ x.style.height="200px";            // styling with variable by assigning it to div
+ x.style.border="4px solid black";
+} 
+
+
+function mas() {
+document.getElementById("para").innerHTML = "Islamic rule will be In whole world";
+}
+
+function ins(){
+  var x =document.getElementById("para");
+x.innerHTML="inshallah islam will be only religion existing on eath";
+}
+
+
+</script>
+</body>
+
+</html>

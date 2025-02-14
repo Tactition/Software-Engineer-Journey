@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Remainder</title>
+
+ <style>
+  .main-wrapper {
+   width: 80%;
+   height: 280px;
+   background-color: greenyellow;
+   border: 1px solid black;
+  }
+
+  input,
+  button {
+   display: inline-block;
+   width: auto;
+   height: 30px;
+   margin: 4px;
+   outline: none;
+  }
+ </style>
+
+</head>
+
+<body>
+
+ <div class="main-wrapper">
+  <h1 align="center">Assistant</h1>
+
+  <div class="scanf">
+   <input type="number" id="first" placeholder="diveser">
+
+   <input type="number" id="second" placeholder="Divident">
+
+   <button onclick="ans()">Answer</button>
+  
+  </div>
+  <p id="res" align="center"></p>
+
+ </div>
+
+<script>
+
+function ans(){
+ var x,y,z;
+ x = document.getElementById("first").value;
+ y = document.getElementById("second").value;
+ z = x/y;
+ b = document.getElementById("res");
+ b.innerHTML = "your Remainder is "+z;
+ return 0;
+ 
+}
+
+</script>
+
+</body>
+
+</html>

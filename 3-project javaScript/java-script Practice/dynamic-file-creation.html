@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create files dynamicaly with js and view and store them</title>
+<style>
+    .container{
+        width: 100%;
+
+    }
+    .main-file-creator{
+        min-height: 300px; /* Minimum height */
+        height: auto; 
+        width: 90%;
+        border: 1px solid black;
+        margin: 0 auto;
+        background-color: beige;
+        box-shadow: 1px 2px 2px 4px #ccc;
+        color: black;
+        font-size: 22px;
+        padding: 8px;
+        text-transform: capitalize;
+
+    }
+
+
+</style>
+</head>
+<body>
+    <div class="container">
+        <h1>Create files dynamicaly with js and view and store them</h1>
+        <div class="main-file-creator" contenteditable="true">
+           
+        </div>
+
+        <input type="" id="file-name">
+        <input type="submit" value="save" onclick="save()">
+        <input type="file" value="view" id="upload-file" style="width:90px;" onchange="read()" >
+    </div> 
+
+    <script>
+        var fileName = document.querySelector("#file-name");
+        
+        function save(){
+            var fileContent = document.querySelector(".main-file-creator").innerHTML;
+            var file_creation = new Blob([fileContent],{type:'text/plain'})
+            var url = URL.createObjectURL(file_creation);
+
+            var a = document.createElement('a');
+            a.href=url;
+            a.download=fileName.value;
+            a.click();
+        }
+
+        function read(){
+            var fileContent = document.querySelector(".main-file-creator");
+            var upload_file = document.getElementById("upload-file");
+
+            var reader = new FileReader();
+            var read = reader.readAsText(upload_file.files[0],"UTF-8")
+            reader.onload = function () {
+                fileContent.innerHTML = reader.result;
+            }
+
+        }
+
+
+    </script>
+</body>
+</html>

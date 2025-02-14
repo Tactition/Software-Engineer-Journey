@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Remainder</title>
+    
+		<style>
+			.main-wrapper {
+				width: 80%;
+				height: 280px;
+				background-color: greenyellow;
+				border: 1px solid black;
+			}
+
+			input,
+			button {
+				display: inline-block;
+				width: auto;
+				height: 30px;
+				margin: 4px;
+				outline: none;
+			}
+		</style>
+	</head>
+
+	<body>
+		<div class="main-wrapper">
+			<h1 align="center">Universal Calculator</h1>
+
+			<div class="scanf">
+				<input id="first" placeholder="calcutation" />
+
+				<button onclick="ans()">Answer</button>
+			</div>
+			<p id="result" align="center"></p>
+		</div>
+
+		<script>
+			function ans() {
+				var x, y;
+				x = document.getElementById("first").value;
+				y = document.getElementById("result");
+				y.innerHTML = eval(x);
+			}
+		</script>
+	</body>
+</html>

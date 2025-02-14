@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>booleans</title>
+
+ <style>
+main{
+ width: 50%;
+ height: 280px;
+ border: 1px solid black;
+ margin:10px auto;
+ text-align: center;
+ font-family: sans-serif;
+ padding: 12px;
+ background-color: #008cff3d;
+ font-weight: 700;
+}
+
+input{
+ width:50%;
+ height:35px;
+ text-align: center;
+ margin-top:8px;
+}
+
+.result{
+ width:100%;
+ height:80%;
+ box-sizing: border-box;
+}
+
+#here{
+ border: 1px solid rgb(255, 0, 0);
+ width: 100%;
+ height: 90%;
+ padding: 10px;
+ box-sizing: border-box;
+ color:green;
+ overflow: hidden;
+}
+
+button{
+ height:40px;
+ margin-left:4px;
+}
+ </style>
+
+</head>
+
+<body>
+
+ <main>
+
+ <form action="">
+  <label for="include">Write Your Thoughts</label> <br>
+  <input type="text" id="include"><button onclick="return update()">Write</button>
+ </form>
+  <div class="result">
+
+   <p id="here">
+ 
+   </p>
+
+  </div>
+
+ </main>
+
+<script>
+
+function update(){
+ var x = document.getElementById("include").value;
+ var y = document.getElementById("here");
+ y.innerHTML=x;
+ return false;
+}
+
+</script>
+
+</body>
+
+</html>

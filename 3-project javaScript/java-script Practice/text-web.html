@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+
+
+    <style>
+        body * {
+            box-sizing: border-box;
+        }
+
+        body,
+        h1 {
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+
+        header {
+            text-align: center;
+            padding: 10px;
+            background-color: orangered;
+            height: 60px;
+            width: 100%;
+            color: white;
+        }
+
+
+
+
+        .editor {
+            width: 50%;
+            float: left;
+            padding: 2%;
+
+
+
+        }
+
+        .preview {
+            width: 50%;
+            float: left;
+            padding: 2%;
+            height: 509px;
+
+
+
+        }
+
+        #fieldset {
+            height: 520px;
+            width: 100%;
+            overflow: scroll;
+            height: 84vh;
+        }
+
+        textarea {
+            width: 100%;
+            height: 78vh;
+            resize: none;
+            border: none;
+            font-family: monospace;
+            font-size: 18px;
+        }
+
+        textarea:focus {
+            outline: none;
+
+        }
+
+        button {
+            width: 80px;
+            height: 40px;
+            position: relative;
+            top: 0;
+            left: -40px;
+
+        }
+    </style>
+
+
+</head>
+
+<body>
+
+    <header>
+        <h1>Zahids Editor</h1>
+    </header>
+
+    <section>
+        <div class="editor">
+            <fieldset>
+                <legend style="font-weight: 700;">Code Editor</legend>
+                <textarea id="editor" cols="30" rows="10" id="editor">
+
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Document</title>
+        <style>
+            h1{
+            color:red;
+            }
+        </style>
+
+        </head>
+        <body>
+            <h1>Heloo Guyz I am Muslim</h1>
+        </body>
+        </html>
+        
+       </textarea>
+            </fieldset>
+        </div>
+
+        <div class="preview">
+
+            <fieldset id="fieldset" oninput="Output()">
+                <legend style="font-weight: 700;">Output header</legend>
+
+                <div id="result"></div>
+
+
+            </fieldset>
+
+
+        </div>
+
+        <button onclick="Output()">result</button>
+
+    </section>
+
+    <script>
+        function Output() {
+            var y = document.getElementById("editor").value;
+            document.getElementById("result").innerHTML = y;
+        }
+
+
+        
+
+
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Image Veiwer</title>
+ <style>
+  #screen {
+   width: 720px;
+   height: 480px;
+   box-sizing: border-box;
+   border: 1px solid black;
+   margin:0 auto;
+   background-image: none;
+   background-size:cover ;
+  }
+
+  .gallery {
+   width:720px;
+   height:90px;
+   box-sizing: border-box;
+   border: 1px solid black;
+   margin: 0 auto;
+   padding: 4px;
+  }
+
+ .full{
+  border: 1px solid black;
+  width: fit-content;
+  margin:0 auto;
+  box-shadow: 3px 2px 10px #ff0000;
+ }
+
+ </style>
+</head>
+
+<body>
+
+ <div class="full">
+
+  <img src="images/2img.jpg" id="screen">
+   
+  </div>
+
+ <div class="gallery">
+
+  <label for="brightness">brightness</label><input type="range" id="brightness" oninput="show()" min="50" max="150">  
+
+  <label for="contrast">contrast</label> <input type="range" id="contrast" min="50" max="150" oninput="show1()">
+
+  <label for="saturation">saturation</label> <input type="range" id="saturation" min="50" max="150" oninput="show2()">  
+
+  
+ </div>
+
+
+
+
+<script>
+function show(){
+var x,y,z;
+x = document.getElementById("brightness").value;
+var a = document.getElementById("screen");
+a.style.filter="brightness("+x+"%)";
+}
+
+function show1(){
+var x,y,z;
+x = document.getElementById("contrast").value;
+var a = document.getElementById("screen");
+a.style.filter="contrast("+x+"%)";
+}
+
+function show2(){
+var x,y,z;
+x = document.getElementById("saturation").value;
+var a = document.getElementById("screen");
+a.style.filter="saturate("+x+"%)";
+}
+
+</script>
+
+</body>
+
+</html>

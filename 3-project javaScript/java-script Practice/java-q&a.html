@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Result Java</title>
+<style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .quest {
+            width: 60%;
+            height: 600px;
+            box-sizing: border-box;
+            margin: 0 auto;
+            background-color: #ffd06c;
+            text-align: center;
+            padding: 2px;
+
+        }
+
+        h1 {
+            color: green;
+            font-family: calibri;
+            padding: 22px;
+            margin: 2px;
+            padding:2px;
+        }
+
+        .sawal {
+            float: left;
+            font-size: 28px;
+            font-family: cursive;
+          
+        }
+
+
+        .btn{
+            width:120px;
+            height: 40px;
+            border: none;
+            font-family: Arial, Helvetica, sans-serif;
+            box-sizing: border-box;
+            border-radius: 20px;
+            font-size:14px;
+            font-weight:600;
+        } 
+
+        .new-question{
+            padding: 10px;
+            background-color: rgba(128, 128, 128, 0.342);
+            width: 90%;
+            box-sizing: border-box;
+            border-radius: 22px;
+            margin:16px auto;
+        }
+
+
+
+</style>
+</head>
+
+<body>
+
+    <div class="quest">
+
+        <h1>Islamic Question & Answer</h1>
+
+        <div class="new-question">
+            <span class="sawal"> Pillars of Islam are Called </span>
+            <button onclick="right()" class="btn">Arkanal Islam </button>
+            <button onclick="wrong()" class="btn">Qadr ul Islam </button>
+        </div>
+
+
+        <div class="new-question">
+            <span class="sawal"> Muslims are monotheistic </span>
+            <button onclick="right()" class="btn">True</button>
+            <button onclick="wrong()" class="btn">False</button>
+        </div>
+
+
+        <div class="new-question">
+            <span class="sawal">first month of Islamic calendar</span>
+            <button onclick="right()" class="btn">Muharram </button>
+            <button onclick="wrong()" class="btn">Shawal</button>
+        </div>
+
+        <div class="new-question">
+            <span class="sawal">Where Is Kabbah Located</span>
+            <button onclick="right()" class="btn">yes </button>
+            <button onclick="wrong()" class="btn">No</button>
+        </div>
+
+        <div class="new-question">
+            <span class="sawal">Surah Fatihaa is last Surah </span>
+            <button onclick="wrong()" class="btn">yes </button>
+            <button onclick="right()" class="btn">no</button>
+        </div>
+
+        <div class="new-question">
+            <span class="sawal">When Do We Pray Fajaar </span>
+            <button onclick="right()" class="btn">Morning</button>
+            <button onclick="wrong()" class="btn">AfterNoon</button>
+        </div>
+    
+        <div class="new-question">
+            <span class="sawal">Prophet Musa's stick turn into</span>
+            <button onclick="right()" class="btn">Snake</button>
+            <button onclick="wrong()" class="btn">Bird</button>
+        </div>
+    
+
+
+    </div>
+
+
+
+
+    <script>
+
+function right(){
+    window.alert("Right Answer");
+}
+
+function wrong(){
+    window.alert("Wrong Answer");
+}
+
+</script>
+
+</body>
+
+</html>

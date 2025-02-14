@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>function Parameters</title>
+</head>
+
+<body>
+
+    <style>
+        .main {
+            width: 40vw;
+            margin: 10px auto;
+            border: 1px solid black;
+            border-radius: 18px;
+            background: rgba(255, 255, 255, 0.35);
+            box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.18);
+        }
+
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .container input {
+            width: 200px;
+            padding: 10px;
+            margin-bottom: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+            margin: 12px;
+        }
+
+        .container p {
+            cursor: pointer;
+            background-color: #f1f1f1;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-align: center;
+            font-weight: bold;
+            font-size: 18px;
+            color: #333;
+            transition: background-color 0.3s;
+        }
+
+        .container p:hover {
+            background-color: #ddd;
+        }
+    </style>
+
+    <div class="main">
+        <div class="container">
+            <input type="number" id="one" placeholder="Enter a number">
+            <input type="text" id="two" placeholder="Enter some text">
+
+            <p id="result" onclick="res()">Addition</p>
+        </div>
+
+        <div class="container">
+            <p id="resulted" onclick="sub()">Subtraction</p>
+        </div>
+    </div>
+
+    <script>
+        function res() {
+            var x = Number(document.getElementById("one").value);
+            var y = Number(document.getElementById("two").value);
+            var r = x + y;
+            document.getElementById("result").innerHTML = r;
+             sub(x, y);
+        }
+
+        function sub(x, y) {
+           var r = x-y;
+           document.getElementById("resulted").innerHTML = r;
+        }
+
+    </script>
+
+</body>
+
+</html>

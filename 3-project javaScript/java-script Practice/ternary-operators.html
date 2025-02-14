@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ternary Ops</title>
+    <style>
+        .main {
+            width: 100%;
+            height: auto;
+        }
+
+        .founder {
+            width: fit-content;
+            height: 200px;
+            float: left;
+            background-color: green;
+            padding: 50px;
+            text-align: center;
+            margin: 10px;
+            box-sizing: border-box;
+            color: white;
+            font-family: "Times New Roman";
+            font-size: 22px;
+        }
+
+        h1 {
+            font-size: 20px;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        form>input:first-child {
+            width: 200px;
+            height: 40px;
+        }
+
+        form>input:last-child {
+            height: 45px;
+        }
+
+        input+p {
+            margin: 8px;
+        }
+
+        #result {
+            position: relative;
+            right: 35px;
+        }
+
+        #val {
+            position: relative;
+            bottom: 33px;
+            right: -88px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main">
+        <div class="founder">
+            <h1>Is Your Name In Criminal list</h1>
+
+            <form action="">
+                <input type="text" id="user" placeholder="search here" />
+                <input type="submit" value="Search" onclick="wap()" />
+            </form>
+        </div>
+
+        <div class="founder">
+            <h1>Check Your Even & Odd'ness</h1>
+
+            <form action="">
+                <input type="text" id="number" placeholder="Find here" oninput="return tap()">
+                <p id="result"></p>
+                <span id="val"></span>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function wap() {
+            var x = document.getElementById("user").value;
+            x == "zahid" ? window.alert("matched") : window.alert("N/A");
+        }
+
+        function tap() {
+            var a = document.getElementById("number").value;
+            y = a % 2 == 0 ? "You are Even" : "U are Odd and Pathetic";
+            document.getElementById("result").innerHTML = y;
+            document.getElementById("val").innerHTML = a;
+            return false;
+
+            // 41,6006,6008,1047
+        }
+    </script>
+</body>
+
+</html>
