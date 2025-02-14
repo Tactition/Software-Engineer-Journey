@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Detail Saver</title>
+</head>
+
+<body>
+    <form action="" onsubmit="store()">
+
+
+        <label for="username">Username</label>
+        <input type="text" id="username"><br><br>
+
+        <label for="email">Email</label>
+        <input type="email" id="email"><br><br>
+
+        <label for="password">Password</label>
+        <input type="password" id="password"><br><br>
+        <input type="submit"><br><br>
+
+        <p id="insert"></p>
+    </form>
+
+    <button onclick="read()">Read</button>
+
+    <script>
+        var feilds =[];
+        feilds[0]=document.getElementById("username");
+        feilds[1]=document.getElementById("email")
+        feilds[2]=document.getElementById("password")
+
+
+        function store() {
+            var user = document.getElementById("username").value;
+            var email = document.getElementById("email").value;
+            var pass = document.getElementById("password").value;
+
+            document.cookie = "username=" + user + ";max-age=3600";
+            document.cookie = "email=" + email + ";max-age=3600";
+            document.cookie = "passord=" + pass + ";max-age=3600";
+
+        }
+
+        function read() {
+            var allcookie = document.cookie.split("; ");
+           
+            for (i = 0; i < allcookie.length; i++) {
+                var name = allcookie[i].split("=");
+                document.getElementById("insert").innerHTML += (name[1] + "<br>");
+                feilds[i].setAttribute("value",name[1]);
+            }
+        }
+
+    </script>
+
+</body>
+
+</html>

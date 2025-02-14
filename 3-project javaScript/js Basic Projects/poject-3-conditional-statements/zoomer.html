@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zoomer</title>
+
+    <style>
+        body {
+            background-color: #080808c9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+
+        }
+
+        .container {
+            width: 60vw;
+            border: 1px solid black;
+            text-align: center;
+            padding: 12px;
+            background-color: white;
+            border-radius: 10px;
+        }
+
+        @media screen and (max-width:360px) {
+            .container {
+                width: 90vw;
+            }
+        }
+
+        .zoomer {
+            background-color: #fff;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 8px 12px 0 rgba(31, 38, 135, 0.37);
+            backdrop-filter: blur(4px);
+            -webkit-backdrop-filter: blur(4px);
+            border: 1px solid rgba(255, 255, 255, 0.18);
+            margin: 0px 8px 30px;
+        }
+
+        button {
+            width: 100px;
+            height: 40px;
+            outline: none;
+            border: none;
+            margin: 4px;
+            font-family: sans-serif;
+            border-radius: 12px;
+        }
+
+        button:hover {
+            cursor: pointer;
+            background-color: #08080834;
+
+        }
+
+        #zooming {
+            font-size: 2em;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <div class="zoomer">
+            <h1 id="zooming">Hello World</h1>
+        </div>
+
+        <div class="funtionalities">
+            <button id="zoom-in">Zoom In</button>
+            <button id="reset">Reset</button>
+            <button id="zoom-out">Zoom Out</button>
+        </div>
+
+    </div>
+
+
+
+    <script>
+
+
+        var zoom_in = document.getElementById("zoom-in");
+        zoom_in.onclick = function zoomin() {
+            var zoom = document.getElementById("zooming");
+            zoom.style.fontSize = "40px";
+
+            zoom_in.onclick = function zoomin() {
+                zoom.style.fontSize = "50px";
+
+                zoom_in.onclick = function zoomin() {
+                    zoom.style.fontSize = "60px";
+
+                    zoom_in.onclick = function zoomin() {
+                        zoom.style.fontSize = "70px";
+
+                    }
+
+                }
+            }
+
+        }
+
+
+        // zoom out here
+
+
+        var zoom_out = document.getElementById("zoom-out");
+            zoom_out.onclick = function zoomout() {
+            var zoom = document.getElementById("zooming");
+            zoom.style.fontSize = "30px";
+
+            zoom_out.onclick = function zoomout() {
+                zoom.style.fontSize = "24px";
+
+                zoom_out.onclick = function zoomout() {
+                    zoom.style.fontSize = "20px";
+
+                    zoom_out.onclick = function zoomout() {
+                        zoom.style.fontSize = "16px";
+                 
+                    }
+
+                }
+            }
+
+        }
+
+
+        // reset here
+
+        var reset = document.getElementById("reset");
+        reset.onclick=function rest(){
+            var zoom = document.getElementById("zooming");
+            zoom.style.fontSize = "32px";
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

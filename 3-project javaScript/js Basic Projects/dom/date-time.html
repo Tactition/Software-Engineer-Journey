@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>date and time</title>
+    <meta http-equiv="refresh" content="0">
+</head>
+<body>
+    <div class="container">
+        <p id="datetime"></p>
+
+        <p id="time"></p>
+        <p id="date"></p>
+    </div>
+
+    <script>
+        var all = document.getElementById("datetime");
+        var time = document.getElementById("time");
+        var date = document.getElementById("date");
+
+        var data=new Date();
+        all.innerHTML=data;
+
+        var onlydate = data.toLocaleDateString();
+
+        time.innerHTML=onlydate;
+
+        var onlytime =data.toLocaleTimeString();
+
+        date.innerHTML=onlytime;
+
+    </script>
+
+</body>
+</html>

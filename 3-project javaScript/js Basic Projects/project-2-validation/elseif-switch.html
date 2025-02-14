@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Else-If Switch</title>
+
+    <style>
+
+        *{
+            font-family: sans-serif;
+        }
+
+        .finder {
+
+            width: fit-content;
+            margin: 0 auto;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="finder">
+
+        <form action="" onsubmit="helo()">
+
+            <label for="vovel">Find Vovel Here</label> <br>
+            <input type="text" id="vovel">
+            <input type="submit" id="submit">
+            <p id="result" align="center"></p>
+
+        </form>
+    </div>
+
+    <script>
+
+        // function helo() {
+        //     var input = document.getElementById("vovel");
+        //     var input_value = document.getElementById("vovel").value;
+        //     var submiter = document.getElementById("submit");
+        //     var resulter = document.getElementById("result");
+        //     sub(input, input_value, submiter, resulter);
+        // }
+
+        var submiter = document.getElementById("submit");
+
+        submiter.onclick = function sub() {
+            const input_value = document.getElementById("vovel").value;
+            var submiter = document.getElementById("submit");
+            var resulter = document.getElementById("result");
+  
+        /*    if (input_value =='a') {
+                resulter.innerHTML = "vovel";
+            }
+            else if (input_value=='e'){
+                resulter.innerHTML = "vovel";  
+            }
+
+            else if (input_value=='i'){
+                resulter.innerHTML = "vovel";  
+            }
+
+            else if (input_value=='o'){
+                resulter.innerHTML = "vovel";  
+            }
+
+            else if (input_value=='u'){
+                resulter.innerHTML = "vovel";  
+            }
+
+            else{
+                resulter.innerHTML = "consonent";
+            }
+            return false; */
+        
+                switch (input_value){
+                    case 'a' :
+                         {resulter.innerHTML="vovel"; return false;};
+                    break;
+                    case 'e' :
+                         {resulter.innerHTML="vovel"; return false;};
+                    break;
+                    case 'i' :
+                         {resulter.innerHTML="vovel"; return false;};
+                    break;
+                    case 'o' :
+                         {resulter.innerHTML="vovel"; return false;};
+                    break;
+                    case 'u' :
+                         {resulter.innerHTML="vovel"; return false;};
+                    break;
+
+                    default : 
+                        {resulter.innerHTML="consonent"; return false;};
+                    }
+                    return false;
+                }
+
+
+            
+
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cookie</title>
+</head>
+
+<body>
+    <input type="text" id="adder">
+
+    <button onclick="add()">Add</button>
+    <button id="btn">Print</button>
+
+    <button onclick="data()">print retrived data</button>
+    <button onclick="del()">delete</button>
+    <p>Welcome Back Sir we Fetched You from Cookie <span id="msg" style="color: red;font-size: 22px;"></span></p>
+    <p>Your Last Visit Was On : <Span id="lastonline" style="color: red;font-size: 22px;"></Span></p>
+
+
+    <script>
+        var btn = document.getElementById('btn');
+        btn.addEventListener("click", demo);
+
+        function add() {
+            var user = document.getElementById("adder").value;
+            document.cookie = "store=" + user + ";max-age=3600";
+        }
+
+        function demo() {
+            var name = document.cookie.split("=");
+            window.alert(name[1]);
+        }
+
+        function data() {
+            var user = document.getElementById("adder");
+            var print = document.cookie.split("=");
+
+            user.value = print[1];
+
+        }
+
+        function del() {
+            document.cookie = "store=;max-age=0";
+
+        }
+
+        window.onload = function () {
+            var save = document.cookie.split("=");
+            document.title = save[1];
+        }
+
+
+        function ref() {
+            if (document.cookie.indexOf('store') != -1) {
+                var save = document.cookie.split("=");
+                document.getElementById("msg").innerHTML = save[1];
+
+            }
+            else {
+
+                document.getElementById("msg").innerHTML = "No Cookie Found";
+
+            }
+        }
+
+        function hell(){
+            var currentdate = new Date();
+            var date = currentdate.toLocaleDateString();
+            var time = currentdate.toLocaleTimeString();
+
+         var savedcook = document.cookie = "cookier=" + date + time + "=" +";max-age=3600";
+            var laston =savedcook.split("=");
+            document.getElementById("lastonline").innerHTML=laston[1];
+        }
+
+        hell();
+
+        ref();
+
+      
+
+
+
+
+    </script>
+</body>
+
+</html>

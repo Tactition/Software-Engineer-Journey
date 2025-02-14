@@ -1,0 +1,305 @@
+@charset "utf=8";
+
+
+*{
+    box-sizing: border-box;
+}
+
+
+body{
+    padding: 0;
+    margin: 0;
+    background-color: #E2E5F1;
+}
+
+header{
+    width: 100%;
+    height: 80px;
+    background-color: #3F5B9C;
+
+}
+.brand{
+    width: 50vw;
+    float: left;
+}
+#logo{
+    font-size: 34px;
+    color: white;
+    font-family: cursive;
+    margin: 0;
+    text-align: center;
+    padding: 16px 4px;
+    font-weight: 700;
+}
+
+.input-feild{
+    float: left;
+    margin: 16px 8px;
+}
+
+label{
+    color: white;
+    font-family: sans-serif;
+    font-size: 12px;
+   
+}
+
+.input-feild input{
+    width: auto;
+    height: 22px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+}
+
+#forgetpass{
+    color: white;
+    font-family: sans-serif;
+    font-size: 12px;
+    text-decoration: none;
+}
+
+#submit{
+    margin: 34px 6px;
+    outline: none;
+    border: none;
+    height: 22px;
+    background-color: #4367AE;
+    color: white;
+
+}
+section{
+    width: 100%;
+    height: 75vh;
+    float: right;
+    clear: both;
+}
+
+.first-half{
+    width: 50%;
+    height: 100%;
+    float: left;
+    background-image: url("images/image.png");
+    background-position: 10px 70px;
+    background-repeat: no-repeat;
+    background-size:contain;
+}
+
+#tagline{
+    font-family: sans-serif;
+    color: #3F5B9C;
+    margin: 20px 55px;
+    text-align:left;
+}
+
+.second-half{
+    width: 50%;
+    height: 100%;
+    float: left;
+}
+
+.second-half h1{
+    margin: 12px 24px;
+    font-weight: 600;
+    font-family: sans-serif;
+}
+
+.second-half p{
+    font-family: sans-serif;
+    margin: 6px 24px;
+    font-size: 14px;
+}
+
+.name,.mobile-pass,.birth,.gender,#submiter,#fanpage{
+    margin-left:24px;
+    margin-top: 8px;
+   
+}
+.name{
+    position: relative;
+    width: fit-content;
+}
+
+#warn1{
+    position:absolute;
+    left: 148px;
+    top: 2px;
+    display: none;
+    
+}
+
+#warn2{
+    position:absolute;
+    right:2px;
+    top: 2px;
+    vertical-align:middle;
+    display: none;
+}
+
+.mobile-pass{
+    position: relative;
+    
+}
+
+#warn3{
+    position:absolute;
+    left:50%;
+    top: 2px;
+    vertical-align:middle;
+    display: none;
+    
+}
+
+#warn4{
+    position: absolute;
+    top: 40px;
+    left: 50%;
+    display: none;
+}
+
+#mp1{
+    position: absolute;
+    top: 0;
+    left: -120px;
+    display: none;
+
+}
+#mt1{
+    position: absolute;
+    top:10px;
+    left: -106px;
+    font-size: 11px;
+    font-weight: 600;
+    z-index:1;
+    color: white;
+    display: none;
+}
+
+/* 2nd sname */
+
+#mp2{
+    position: absolute;
+    top:-3px;
+    right: -130px;
+    scale:-1;
+    display: none;
+
+}
+#mt2{
+    position: absolute;
+    top:8px;
+    right: -120px;
+    font-size: 11px;
+    font-weight: 600;
+    z-index:1;
+    color: white;
+    display: none;
+}
+#mp3{
+    position: absolute;
+    top: 35px;
+    left: -190px;
+    display: none;
+}
+#mt3{
+    position: absolute;
+    top: 46px;
+    left: -175px;
+    width: 158px;
+    font-size: 10px;
+    font-family: sans-serif;
+    font-weight: 400;
+    color: white;display: none;
+}
+
+
+#fname, #sname{
+    height:30px;
+    position: relative; 
+    
+}
+#phone,#pass{
+    width:54.5% ;
+    height: 30px;
+    margin-bottom: 8px;
+}
+.showpass label{
+    color: grey;
+    display: inline-block;
+    vertical-align: text-top;
+}
+
+
+
+
+label[for="birth"]{
+    color:black;
+    font-size: 16px;
+    font-family: sans-serif;
+}
+
+select{
+    height: 32px;
+}
+
+#why{
+    display: inline-block;
+    width: 150px;
+    font-size: 12px;
+    margin: 2px 4px;
+    vertical-align: bottom;
+    color:#4367AE;
+    font-weight: 500;
+    font-family: sans-serif;
+}
+
+.gender label{
+    color:black ;
+    text-transform: capitalize;
+    font-weight:500;
+    font-size: 14px;
+}
+
+#terms{
+    width: 320px;
+    font-size:12px;
+    color: gray;
+
+}
+
+#submiter{
+    width:120px;
+    height: 28px;
+    background-color: #609E50;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+    color: white;
+    font-weight: 600;
+}
+
+#fanpage{
+    font-size: 10px;
+    font-weight:400;
+    margin-top: 100px;
+    color: black;
+    text-decoration:none;
+    font-family: helvetica;
+}
+
+#decore{
+    text-decoration: none;
+    font-size: 12px;
+    font-weight:700;
+    font-family:Arial, Helvetica, sans-serif;
+    color: #4367AE;
+}
+
+#developers{
+    text-align: center;
+    color: grey;
+
+}
+
+
+

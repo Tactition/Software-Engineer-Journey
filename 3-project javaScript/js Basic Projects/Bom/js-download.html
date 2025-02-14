@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Download with Js</title>
+
+    <style>
+        #time{
+            font-size: 18px;
+            color: red ;
+            font-family: sans-serif;
+
+        }
+    </style>
+
+</head>
+<body>
+    <div class="contianer">
+        <p id="jsdownload">Your Download Will Begain In <span id="time">5s</span> Please Be Patient</p>
+        <p id="download"> <a href="imgs/txt.jpg" download="download"> Click Here To Download</a></p>
+    </div>
+
+
+    <script>
+        window.onload=function(){
+            var timer = document.getElementById("time");
+            var i = 5;
+           var set = setInterval(demo,1000)
+
+            function demo(){
+               i--;
+               timer.innerHTML = i;
+               if(i==0){
+                   clearInterval(set)
+                   var a = document.createElement("a");
+                   a.href="imgs/txt.jpg";
+                   a.download="file";
+                   a.click(); 
+               }  
+            }  
+        }
+    </script>
+
+</body>
+</html>

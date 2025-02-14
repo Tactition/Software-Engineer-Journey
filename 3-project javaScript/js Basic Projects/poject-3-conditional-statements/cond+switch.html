@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Switch</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            font-family: sans-serif;
+        }
+
+        .item {
+            width: 380px;
+            background-color: cornsilk;
+            float: left;
+            margin: 8px 10px;
+            padding: 8px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+
+        input {
+            width: auto;
+            height: 40px;
+            border-radius: 12px;
+            outline: none;
+            border: 1px solid black;
+
+        }
+
+        button {
+            height: 40px;
+            outline: none;
+            border: 1px solid black;
+            background-color: white;
+            border-radius: 12px;
+        }
+
+        #result {
+            width: 250px;
+            height: auto;
+            border-radius: 12px;
+            clear: both;
+            margin: 18px;
+            color: red;
+            text-align: center;
+            padding: 14px;
+            margin: 0 auto;
+            box-shadow: 2px 2px 4px 1px grey;
+        }
+
+
+        @media only screen and (min-width:280px) and (max-width:480px) {
+            .container {
+                width: 100%;
+
+            }
+
+            .item {
+                width: 100%;
+                padding: 8px;
+                margin: 8px 0;
+            }
+        }
+    </style>
+
+</head>
+<body>
+    
+    <div class="item">
+        <h2>Word Converter</h2>
+        <input type="text" id="wordconvert">
+        <button type="submit" onclick="return wordconverting()">Check</button>
+
+       
+    </div>
+ <p id="result">Result Here <br></p>
+    <script>
+        function wordconverting() {
+            var num = Number(document.getElementById("wordconvert").value);
+            var res = document.getElementById("result");
+
+           switch(num){
+
+            case 0:{
+                res.innerHTML="zero";
+                return false
+            }
+            break;
+
+            case 1:{
+                res.innerHTML="one";
+                return false
+            }
+            break;
+
+            case 2:{
+                res.innerHTML="two";
+                return false
+            }
+            break;
+
+            case 3:{
+                res.innerHTML="Three";
+                return false
+            }
+            break;
+
+            case 4:{
+                res.innerHTML="Four";
+                return false
+            }
+            break;
+
+            case 5:{
+                res.innerHTML="Five";
+                return false
+            }
+            break;
+
+            case 6:{
+                res.innerHTML="Six";
+                return false
+            }
+            break;
+
+            case 7:{
+                res.innerHTML="Seveen";
+                return false
+            }
+            break;
+
+            case 8:{
+                res.innerHTML="Eight";
+                return false
+            }
+            break;
+
+            case 9:{
+                res.innerHTML="Nine";
+                return false
+            }
+            break;
+
+            default:{
+                res.innerHTML="Input Error Intelectual Zahid"
+            }
+            return false;
+           }
+
+        }
+    </script>
+
+</body>
+</html>

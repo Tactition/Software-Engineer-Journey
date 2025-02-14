@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en" oncontextmenu="window.alert('Right press Not Availabel for Theifs'); return false">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            height: auto;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+
+
+        .container {
+            border: 1px solid #ccc;
+            box-shadow: 2px 2px 4px 2px #ccc;
+            border-radius: 20px;
+            float: left;
+            padding: 22px;
+            box-sizing: border-box;
+
+        }
+
+        #grateful {
+            color: #0084ff;
+            font-family: sans-serif;
+
+        }
+
+        .payment-form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            clear: left;
+        }
+
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+
+        input {
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+
+        .cardfullwidth {
+            display: flex;
+        }
+
+        input[class=cardwidth] {
+            width: 100px;
+            margin-right: 5px;
+        }
+
+        button {
+            padding: 10px;
+            background-color: #3498db;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+
+        button:hover {
+            background-color: #217dbb;
+        }
+    </style>
+    <title>Payment Page</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>Payment Gateway for <span id="grateful">TACTITIONS</span> University</h2>
+    </div>
+
+    <form class="payment-form">
+        <label for="cardNumber">Card Number</label>
+        <div class="cardfullwidth">
+            <input type="text" id="a" class="cardwidth" maxlength="4" onkeyup="demo(this,'b')">
+            <input type="text" id="b" class="cardwidth" maxlength="4" onkeyup="demo(this,'c')">
+            <input type="text" id="c" class="cardwidth" maxlength="4" onkeyup="demo(this,'d')">
+            <input type="text" id="d" class="cardwidth" maxlength="4">
+        </div>
+        <label for="cardHolder">Card Holder</label>
+        <input type="text" id="cardHolder" placeholder="John Doe" required>
+
+        <label for="expiryDate">Expiry Date</label>
+        <input type="text" id="expiryDate" placeholder="MM/YY" required>
+
+        <label for="cvc">Here is Keycode</label>
+        <input type="text" id="cvc" placeholder="the button you press their keycode will display here" required>
+
+
+        <button type="submit">Submit Payment</button>
+    </form>
+
+
+    <script>
+
+        // history.pushState(null,null,'fake path');
+
+
+        function demo(x, y) {
+            var user = x.value.length; // here we extracted the length of input element stored in this in argument and used the value and length keyword to determine the length. 
+            var length = x.getAttribute("maxlength");  //here we fetched the value of max length attribute by using the getattribute function
+
+            if (user == length) {
+                document.getElementById(y).focus();
+            }
+           
+        }
+
+
+
+        document.onkeyup = function (event) {
+            var res = document.getElementById("cvc");
+            var key = event.keyCode;
+            res.setAttribute("value", key);
+        }
+
+        document.onkeydown=function(event){
+            if(event.ctrlKey && event.shiftKey && event.keyCode==73){
+                window.alert("Dont be Smart Infront of Tactition.");
+                 return false;
+            }
+
+            else if(event.ctrlKey  && event.keyCode==85){
+                window.alert("Dont be Smart Infront of Tactition.");
+                return false;
+            }
+           
+        }
+
+    </script>
+
+
+</body>
+
+</html>

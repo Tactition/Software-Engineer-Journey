@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table </title>
+
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+        }
+
+        .container{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+    </style>
+
+</head>
+<body>
+
+<div class="container">
+    <form action="">
+        <input type="text" id="number" placeholder="enter number">
+        <input type="submit" value="submit" onclick="return printer()">
+        <p id="result"></p>
+    </form>
+</div>
+
+<script>
+    function printer(){
+    var number = document.getElementById('number').value;
+    var result =document.getElementById('result');
+    var i;
+    for(i=0;i<=number;i++){
+        if(i%2===0){
+            result.innerHTML+=i+"<br>";
+        }
+    }
+return false;
+}
+</script>  
+  
+</body>
+</html>

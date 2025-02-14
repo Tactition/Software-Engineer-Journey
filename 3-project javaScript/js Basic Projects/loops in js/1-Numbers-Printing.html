@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Printing With Loops</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        .container {
+            width: 100%;
+            font-family: sans-serif;
+        }
+
+        .item {
+            width: 380px;
+            background-color: cornsilk;
+            float: left;
+            margin: 8px 10px;
+            padding: 8px;
+            border: 1px solid black;
+            text-align: center;
+        }
+
+
+        input {
+            width: auto;
+            height: 40px;
+            border-radius: 12px;
+            outline: none;
+            border: 1px solid black;
+
+        }
+
+        button {
+            height: 40px;
+            outline: none;
+            border: 1px solid black;
+            background-color: white;
+            border-radius: 12px;
+        }
+
+        #result {
+            width: 250px;
+            height: auto;
+            border-radius: 12px;
+            clear: both;
+            margin: 18px;
+            color: red;
+            text-align: center;
+            padding: 14px;
+            margin: 0 auto;
+            box-shadow: 2px 2px 4px 1px grey;
+        }
+
+
+        @media only screen and (min-width:280px) and (max-width:480px) {
+            .container {
+                width: 100%;
+
+            }
+
+            .item {
+                width: 100%;
+                padding: 8px;
+                margin: 8px 0;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <form action="">
+
+            <div class="item" id="natural">
+                <h2>Natural Number</h2>
+                <input type="text" id="nature">
+                <button type="submit" onclick="return natural()">Print Natural</button>
+            </div>
+
+            <div class="item">
+                <h2>Reverse Number</h2>
+                <input type="text" id="nature1">
+                <button type="submit" onclick="return rev()">Print Natural</button>
+            </div>
+
+            <div class="item">
+                <h2>even Number</h2>
+                <input type="text" id="evenno">
+                <button type="submit" onclick="return even()">Print Even</button>
+            </div>
+
+            <div class="item">
+                <h2>Odd Number</h2>
+                <input type="text" id="oddno">
+                <button type="submit" onclick="return odd()">Print Even</button>
+            </div>
+
+            <div class="item">
+                <h2>Sum of Natural Number</h2>
+                <input type="text" id="sumon">
+                <button type="submit" onclick="return sum()">Print Even</button>
+            </div>
+
+            <div class="item">
+                <h2>Sum of odd Numbers</h2>
+                <input type="text" id="sumodd">
+                <button type="submit" onclick="return sumoddno()">Print odd</button>
+            </div>
+
+            <div class="item">
+                <h2>length of Numbers</h2>
+                <input type="text" id="length">
+                <button type="submit" onclick="return findlength()">length of numbers</button>
+            </div>
+
+            <div class="item">
+                <h2>Calculate the Sum of numbers</h2>
+                <input type="text" id="calculsum">
+                <button type="submit" onclick="return calcsum()">Calculate</button>
+            </div>
+
+            <div class="item">
+                <h2>Ulta Printing </h2>
+                <input type="text" id="ultainput">
+                <button type="submit" onclick="return ultaprinting()">Check</button>
+            </div>
+
+            <div class="item">
+                <h2>Word Converter</h2>
+                <input type="text" id="wordconvert">
+                <button type="submit" onclick="return wordconverting()">Check</button>
+            </div>
+
+
+
+
+
+            <p id="result">Result Here <br></p>
+
+        </form>
+
+    </div>
+
+
+
+    <script>
+        function natural() {
+            var user = document.getElementById("nature").value;
+            var res = document.getElementById("result");
+
+            var i;
+            for (i = 1; i < user; i++) {
+                res.innerHTML += i + "<br>";
+
+            }
+            return false;
+        }
+
+        function rev() {
+            var user = Number(document.getElementById("nature1").value); // Parse user input as an integer
+            var res = document.getElementById("result");
+            var i;
+            for (i = user; i >= 1; i--) {
+                res.innerHTML += i + "<br>";
+            }
+
+            return false;
+        }
+
+        function even() {
+            var even = document.getElementById("evenno").value;
+            var res = document.getElementById("result");
+
+            var i;
+            for (i = 0; i <= even; i++) {
+                if (i % 2 === 0) {
+                    res.innerHTML += i + "<br>";
+                }
+            }
+            return false;
+        }
+
+        function odd() {
+
+            var odd = document.getElementById("oddno").value;
+            var res = document.getElementById("result");
+
+            var i;
+            for (i = 0; i <= odd; i++) {
+                if (i % 2 !== 0) {
+                    res.innerHTML += i + "<br>";
+                }
+            }
+            return false;
+        }
+
+        function sum() {
+            var sum = document.getElementById("sumon").value;
+            var res = document.getElementById("result");
+
+            var i;
+            var add = 0;
+            for (i = 1; i <= sum; i++) {
+
+                add = add + i;
+                res.innerHTML = add;
+
+            }
+            return false;
+        }
+
+        function sumoddno() {
+            var sum = document.getElementById("sumodd").value;
+            var res = document.getElementById("result");
+            var i;
+            var add = 0;
+            for (i = 1; i <= sum; i++) {
+                if (i % 2 !== 0) {
+                    add = add + i;
+                    res.innerHTML = add;
+                }
+
+            }
+            return false;
+        }
+
+        function findlength() {
+            var input = document.getElementById("length").value;
+            var print = document.getElementById("result")
+            var result = input.toString().length;
+            print.innerHTML = result;
+            return false;
+        }
+
+        function calcsum() {
+            "use strict"
+            var input = document.getElementById("calculsum").value;
+            var res = document.getElementById("result");
+
+            var digit = input;
+            var n = digit.toString().length;
+
+
+            var lastdigit = 0;
+            var sum = 0;
+
+
+            var i;
+            for (i = 1; i < n; i++) {
+                lastdigit = input % 10;
+                sum = sum + lastdigit;
+                num = parseInt(num / 10);
+
+
+            }
+            res.innerHTML = sum;
+
+
+        }
+
+        function ultaprinting() {
+            var input = document.getElementById("ultainput").value;
+            var In_input = input;
+
+            var res = document.getElementById("result");
+
+            var lastdigit = 0;
+            var result = 0;
+
+            while (input !== 0) {
+                lastdigit = input % 10;
+                input = parseInt(input / 10);
+                result = result * 10 + lastdigit;
+            }
+            res.innerHTML = result;
+
+            return false;
+        }
+
+        function wordconverting() {
+            var num = Number(document.getElementById("wordconvert").value);
+            var res = document.getElementById("result");
+            
+            var x = num.toString();
+            var y = x.length;
+
+            var i;
+            for(i=0;i<y;i++)
+            {
+
+                switch(x.charAt(i)){
+                    case '0' : {
+                    res.innerHTML+="Zero";
+                }
+                break;
+
+                case '1' : {
+                    res.innerHTML+="One";
+                }
+                break;
+
+                case '2' : {
+                    res.innerHTML+="Two";
+                }
+                break;
+
+                case '3' : {
+                    res.innerHTML+="Three";
+                }
+                break;
+
+                case '4' : {
+                    res.innerHTML+="Four";
+                }
+                break;
+
+                case '5' : {
+                    res.innerHTML+="Five";
+                }
+                break;
+
+                case '6' : {
+                    res.innerHTML+="Six";
+                }
+                break;
+
+                case '7' : {
+                    res.innerHTML+="Seven";
+                }
+                break;
+
+                case '8' : {
+                    res.innerHTML+="Eight";
+                }
+                break;
+
+                case '9' : {
+                    res.innerHTML+="Nine";
+                }
+                break;
+
+                default : {
+                    res.innerHTML+="Zahid Your Brain is To Smart  That U did a minor mistake.While writing the number or code"
+                }
+                }
+                
+            }
+           return false;
+
+        }
+
+        
+        
+    </script>
+
+
+</body>
+
+</html>

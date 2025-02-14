@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+
+    <button id="btn" onclick="demo()">hide</button>
+    <img src="/java-script Practice/images/coffe.gif" id="result">
+
+    <script>
+        function demo(){
+            var x = document.getElementById("result");
+            var btn = document.getElementById("btn");
+            var btntext = document.getElementById("btn").innerHTML;
+            x.style.display = "none";
+            btn.innerHTML = "show";
+
+
+            if (btntext == "show") {
+                x.style.display = "block";
+                btn.innerHTML = "hide";
+            }
+
+            else {
+
+                x.style.display = "none";
+                btn.innerHTML = "show";
+
+            }
+
+        }
+
+
+    </script>
+</body>
+
+</html>

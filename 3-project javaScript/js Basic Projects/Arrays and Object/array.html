@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Arrays</title>
+
+    <style>
+        .container {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+    
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+    
+        label {
+            margin-bottom: 8px;
+        }
+    
+        input {
+            width: 100%;
+            padding: 8px;
+            margin-bottom: 16px;
+        }
+    
+        #resulter {
+            font-weight: bold;
+            margin-bottom: 16px;
+        }
+    
+        button {
+            padding: 8px 16px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="container">
+        <h1 style="color: white;text-align: center;border: 1px solid white;">Arrays Practice</h1>
+        <form action="" id="submiter">
+            <label for="username">Username</label>
+            <input type="text" id="username">
+
+            <label for="password">Password</label>
+            <input type="text" id="password">
+
+            <p id="resulter">Result Goes Here</p>
+
+            <button type="submit">Show Here</button>
+        </form>
+    </div>
+
+    <script>
+
+        var submit = document.getElementById("submiter");
+        submit.onsubmit = function () {
+
+            var result = document.getElementById("resulter");
+            var userpass = [];   //during declearation is not preferred
+            userpass[0] = document.getElementById("username").value;  //afetr declearation
+            userpass[1] = document.getElementById("password").value;
+
+            result.innerHTML = userpass[0] + " " + userpass[1];
+            return false;
+        }
+
+    </script>
+
+</body>
+
+</html>

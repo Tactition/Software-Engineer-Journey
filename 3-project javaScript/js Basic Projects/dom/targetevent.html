@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>event target </title>
+</head>
+<body>
+    <button onclick="demo(event)">heloo</button> 
+    <!-- //her event targets the button and stores buton in itself = event; -->
+
+
+    <script>
+        // here below in parenthesis () of demo function we are passing event as an argument. which means that x is now the button element.
+
+        function demo(x){  
+            alert(x.target);
+        }
+        
+        // here the target examins the element stored in x,and tells us weather it is element or method;
+    </script>
+</body>
+</html>

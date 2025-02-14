@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+
+    <style>
+        .container{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+        }
+    </style>
+
+</head>
+
+<body id="bgcolor">
+
+    <div class="container">
+        <input type="radio" name="radio" value="red" id="red" onclick="demo(this)">Red
+        <input type="radio" name="radio" value="orange" id="blue" onclick="demo(this)">Orange
+        <input type="radio" name="radio" value="yellow" id="yellow" onclick="demo(this)">Yellow
+    </div>
+
+
+
+    <script>
+
+        // global variables 
+        var body = document.getElementById("bgcolor");
+
+        window.onload = function(){
+            var cookiecolor = document.cookie.split("=");
+            var onlycolor=cookiecolor[1];
+            body.style.backgroundColor=onlycolor;
+
+           var first=document.getElementById("red");
+           var second=document.getElementById("blue");
+           var third=document.getElementById("yellow");
+
+                if(first.value==onlycolor){
+                    first.setAttribute("checked","checked");
+                }
+                
+                else if(second.value==onlycolor){
+                    second.setAttribute("checked","checked");
+                }
+
+                else if(third.value==onlycolor){
+                    third.setAttribute("checked","checked");
+                }
+        }
+
+
+        function demo(element){
+            var colour = element.value
+            body.style.backgroundColor=colour;
+            document.cookie="storedata="+colour;
+        }
+       
+
+    </script>
+
+</body>
+
+</html>

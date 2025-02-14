@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <link rel="stylesheet" href="animate.css">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            background: linear-gradient(1000deg, #ffc24f, #ff4f4f);
+            background-size: cover;
+            padding: 0;
+            margin: 0;
+        }
+
+        fieldset {
+            width: 60%;
+            display: block;
+            margin: 10px auto;
+        }
+
+        legend {
+            font-size: 18px;
+            font-weight: 600;
+            text-align: center;
+            background-color: white;
+            padding: 12px;
+            border-radius: 12px;
+
+        }
+
+        form {
+            width: 100%;
+            box-shadow: 0px 1px 2px grey;
+            padding: 12px;
+            backdrop-filter: blur(5px);
+        }
+
+        label {
+            display: block;
+            text-align: center;
+            margin-top: 18px;
+            font-size: 18px;
+            font-family: sans-serif;
+            font-weight: 500;
+        }
+
+        .icon {
+            position: relative;
+        }
+
+        .fa {
+            display: none;
+            position: absolute;
+            top: 40px;
+            right: 130px
+        }
+
+        #email-hint{
+            display: none;
+            text-align: center;
+            height:4vh;
+            width: 60%;
+            background-color: white;
+            margin: 0 auto;
+            border-radius: 5px;
+            padding:2px;
+            box-sizing: border-box;
+            word-spacing: 40px;
+            cursor: pointer;
+        }
+
+
+        input {
+            width: 60%;
+            height: 45px;
+            margin: 2px auto;
+            display: block;
+        }
+
+        input[type="submit"] {
+            margin-top: 20px;
+            cursor: not-allowed;
+            background-color: #5e96ff;
+            color: white;
+            border: none;
+        }
+
+        /* Media Queries for Responsive Design */
+
+        @media (max-width: 768px) {
+            fieldset {
+                width: 90%;
+            }
+
+            .fa {
+                display: none;
+                position: absolute;
+                top: 40px;
+                right: 138px;
+            }
+
+        }
+
+        @media (max-width: 480px) {
+            input {
+                width: 80%;
+            }
+
+            .fa {
+                display: none;
+                position: absolute;
+                top: 40px;
+                right: 2px;
+            }
+        }
+
+        
+    </style>
+
+</head>
+
+<body>
+    <fieldset>
+        <legend>Admission Form</legend>
+        <form action="">
+
+            <div class="icon">
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" onblur="f_fname()" onchange="uname_val()" >
+                <i class="fa fa-check" id="1icon"></i>
+            </div>
+
+            <div class="icon">
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" onblur="return f_lname(); uname_val();f_lname()"
+                    onclick="return f_fname();uname_val();f_lname()" onchange="uname_val()">
+                <i class="fa fa-check" id="2icon"></i>
+            </div>
+
+            <div class="icon">
+                <label for="mobile">Mobile Number</label>
+                <input type="number" id="mobile" onblur="f_mobile()">
+                <i class="fa fa-check" id="3icon"></i>
+            </div>
+
+            <div class="icon">
+                <label for="re-mobile">Re-Number</label>
+                <input type="number" id="re-mobile" onblur="re_mobile()">
+                <i class="fa fa-check" id="4icon"></i>
+            </div>
+
+            <div class="icon">
+                <label for="email">E-mail</label>
+                <input type="email" id="email" oninput="emaily()">
+                <i class="fa fa-check" id="5icon"></i>
+                <div id="email-hint">
+                    <span id="gmail" onclick="gmail()">Gmail.com</span>
+                    <span id="hotmail" onclick="hotmail()">Hotmail.com</span>
+                    <span id="yahoo" onclick="yahoo()">yahoo.com</span>
+                </div>
+            </div>
+
+            <div class="icon">
+                <label for="username">Username</label>
+                <input type="text" id="username" onblur="return uname_val()"
+                    onclick="return f_fname();f_lname();uname_val()">
+                <i class="fa fa-check" id="6icon"></i>
+            </div>
+
+            <div class="icon">
+                <label for="password">Password</label>
+                <input type="text" id="password" onblur="pass()" onchange="submiter()">
+                <i class="fa fa-check" id="7icon"></i>
+            </div>
+
+            <input type="submit" value="Submit" id="submit" disabled>
+        </form>
+    </fieldset>
+
+
+    <script>
+        function f_fname() {
+            var input = document.getElementById("fname");
+            var ficon = document.getElementById("1icon");
+            var fname_value = document.getElementById("fname").value;
+
+            fname_value == "" ? input.setAttribute("placeholder", "Please Fill the feild") : ficon.style.display = "block";
+            fname_value == "" ? input.setAttribute("class", "animate__animated animate__shakeX") : ficon.style.display = "block";
+
+        }
+        function f_lname() {
+            var input = document.getElementById("lname");
+            var ficon = document.getElementById("2icon");
+            var lname_value = document.getElementById("lname").value;
+
+            lname_value == "" ? input.setAttribute("placeholder", "Please Fill the feild") : ficon.style.display = "block";
+            lname_value == "" ? input.setAttribute("class", "animate__animated animate__shakeX") : ficon.style.display = "block";
+
+        }
+
+        function f_mobile() {
+            var input_feild = document.getElementById("mobile");
+            var mobile_value = document.getElementById("mobile").value;
+            var ficon = document.getElementById("3icon");
+
+            mobile_value == "" ? input_feild.setAttribute("placeholder", "Please Fill the feild") : ficon.style.display = "block";
+
+            mobile_value == "" ? input_feild.setAttribute("class", "animate__animated animate__shakeX") : ficon.style.display = "block";
+
+        }
+
+        function re_mobile() {
+            var mobile_value = document.getElementById("mobile").value;
+            var input = document.getElementById("re-mobile");
+            var remobile_value = document.getElementById("re-mobile").value;
+            var ficon = document.getElementById("4icon");
+            
+           remobile_value==""? input.setAttribute("placeholder", "Please Fill the feild"):remobile_value;
+
+           remobile_value == mobile_value ? ficon.style.display = "block" : input.value="match not found";
+
+           remobile_value.charAt(0)==(8) || remobile_value.charAt(0)==(7) || remobile_value.charAt(0)==(9) ? window.alert("indian Airtel-Selected") : input.value="match not found";
+
+           remobile_value.length == 10 ? ficon.style.display = "block" : window.alert("10 digits not found");
+
+            remobile_value == "" ? input.setAttribute("class", "animate__animated animate__shakeX") :remobile_value;
+
+           remobile_value == mobile_value ? ficon.style.display = "block" : input.setAttribute("placeholder", "Please Fill the feild");
+        }
+
+        function emaily() {
+
+            var input = document.getElementById("email");
+            var ficon = document.getElementById("5icon");
+            var email_hint = document.getElementById("email-hint");
+            var email_value = document.getElementById("email").value;
+
+            var input = email_value.match('@')? email_hint.style.display = "block" : input.setAttribute("placeholder", "Please Fill the feild");
+            
+            var input = email_value.match(".com")? email_hint.style.display = "none" : email_value ;
+            email_value.match(".com")? ficon.style.display = "block" :ficon.style.display = "none";
+        }
+
+        function gmail(){
+            var input = document.getElementById("email"); 
+            var ficon = document.getElementById("5icon");
+            var email_value = document.getElementById("email").value;
+            var email_hint = document.getElementById("email-hint");
+
+           var email= input.value=email_value+"gmail.com";
+            email_hint.style.display="none";
+            email.match("gmail.com")? ficon.style.display = "block" :ficon.style.display = "none";
+
+
+        }
+
+        function hotmail(){
+            var input = document.getElementById("email"); 
+            var ficon = document.getElementById("5icon");
+            var email_value = document.getElementById("email").value;
+            var email_hint = document.getElementById("email-hint");
+
+            var email= input.value=email_value+"hotmail.com";
+            email_hint.style.display="none";
+            email.match("hotmail.com")? ficon.style.display = "block" :ficon.style.display = "none";
+            
+
+        }
+
+        function yahoo(){
+            var input = document.getElementById("email"); 
+            var ficon = document.getElementById("5icon");
+            var email_value = document.getElementById("email").value;
+            var email_hint = document.getElementById("email-hint");
+
+           var email= input.value=email_value+"yahoo.com";
+            email_hint.style.display="none";
+            email.match("yahoo.com")? ficon.style.display = "block" :ficon.style.display = "none";
+            
+
+        }
+
+        // user name validation
+
+        function uname_val() {
+            var input_username = document.getElementById("username");
+            var input_fname = document.getElementById("fname");
+            var input_lname = document.getElementById("lname");
+
+            var uname = document.getElementById("username").value;
+            var f_name = document.getElementById("fname").value;
+            var l_name = document.getElementById("lname").value;
+
+            var ficon = document.getElementById("6icon");
+
+            input_username.setAttribute("value", f_name + l_name);
+            input_username.setAttribute("disabled", "disabled");
+
+
+            uname == "" ? ficon.style.display = "none" : ficon.style.display = "block";
+
+        }
+
+        function pass() {
+            var input = document.getElementById("password");
+            var ficon = document.getElementById("7icon");
+            var password_value = document.getElementById("password").value;
+
+            var upper = /[A-Z]/g;
+            var lower = /[a-z]/g;
+            var num = /[0-9]/g;
+            var alpha =/[@|?]/g;
+
+            var check_upper = password_value == "" ? input.value="please enter password" :password_value;
+
+            var check_lower = check_upper.charAt(0).match(upper) ? check_upper : window.alert("upper case not found in first letter");
+
+           var number = check_lower.match(lower)? check_lower : window.alert("lowercase not found");
+
+           var check_alpha = number.match(num)? number : window.alert("number not found");
+
+           var check_length = check_alpha.match(alpha)? check_alpha : window.alert("alpha character not found");
+
+           check_length.length > 6 ? ficon.style.display = "block" : window.alert("password length less than 6");
+        }
+
+      
+
+
+        // submit button
+
+
+        //  password validation 
+
+        function submiter() {
+            var f_name = document.getElementById("fname").value;
+            var l_name = document.getElementById("lname").value;
+            var mobile = document.getElementById("mobile").value;
+            var remobile = document.getElementById("re-mobile").value;
+            var email = document.getElementById("email").value;
+            var uname = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            var btn = document.getElementById("submit");
+
+            f_fname, l_name, mobile, remobile, email, uname, pass == "" ? btn.disabled = true : btn.disabled = false;
+            f_fname, l_name, mobile, remobile, email, uname, pass == "" ? btn.disabled = true : btn.style.backgroundColor = "#2a6de9";
+            f_fname, l_name, mobile, remobile, email, uname, pass == "" ? btn.disabled = true : btn.style.cursor = "pointer";
+
+
+        }
+
+
+    </script>
+
+
+
+</body>
+
+</html>

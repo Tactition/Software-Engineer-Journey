@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sort Funtion </title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 40vw;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f0f0f0;
+            margin: 0 auto;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+
+        }
+
+        @media only screen and (max-width: 380px) {
+            .container {
+                width: 90vw;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+            font-family: sans-serif;
+            background-color: white;
+            border-radius: 22px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        input[type="text"] {
+            width: 100%;
+            padding: 5px;
+            margin-bottom: 10px;
+        }
+
+        button[type="submit"] {
+            background-color: #4caf50;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #45a049;
+        }
+
+        p {
+            text-align: center;
+            margin: 12px;
+            color: red;
+        }
+    </style>
+
+    <div class="container">
+        <h1>Sort Funtion Organiser</h1>
+        <form action="">
+            <label for="num1">Number/Text 1</label>
+            <input type="text" id="num1">
+
+            <label for="num2">Number/Text 2</label>
+            <input type="text" id="num2">
+
+            <label for="num3">Number/Text 3</label>
+            <input type="text" id="num3">
+
+            <label for="num4">Number/Text 4</label>
+            <input type="text" id="num4">
+
+            <label for="num5">Number/Text 5</label>
+            <input type="text" id="num5"> <br>
+
+            <button type="submit" id="submit">Submit numbers</button>
+            <button type="submit" onclick="return text()">Submit text</button>
+
+            <p id="result"></p>
+
+        </form>
+    </div>
+
+    <script>
+
+        var submit = document.getElementById('submit');
+        submit.onclick = function () {
+            var user = [];
+            user[0] = document.getElementById('num1').value;
+            user[1] = document.getElementById('num2').value;
+            user[2] = document.getElementById('num3').value;
+            user[3] = document.getElementById('num4').value;
+            user[4] = document.getElementById('num5').value;
+            var result = document.getElementById('result');
+            user.sort(
+                function (a, b) {
+                    return a - b
+                });
+            result.innerHTML = user.toString();
+            return false;
+        }
+
+        // for text 
+        function text() {
+            var user = [];
+            user[0] = document.getElementById('num1').value;
+            user[1] = document.getElementById('num2').value;
+            user[2] = document.getElementById('num3').value;
+            user[3] = document.getElementById('num4').value;
+            user[4] = document.getElementById('num5').value;
+            var result = document.getElementById('result');
+            user.sort();
+            result.innerHTML = user.toString();
+            return false;
+        }
+
+
+    </script>
+
+    </body>
+
+</html>

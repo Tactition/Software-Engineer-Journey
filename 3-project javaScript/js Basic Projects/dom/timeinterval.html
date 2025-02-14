@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Time interval</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <p id="timer">click</p>
+        <button onclick="stopper()">Stop</button>
+    </div>
+
+
+    <script>
+
+        var time = document.getElementById("timer");
+        var stop;
+        
+        time.addEventListener("click", function () {
+            var x =1;
+
+            function demo() {
+                time.innerHTML = x++;
+            }
+
+            stop = setInterval(demo,0);
+        
+        });
+
+        function stopper() {
+            clearInterval(stop);
+        }
+
+
+
+
+    </script>
+
+</body>
+
+</html>

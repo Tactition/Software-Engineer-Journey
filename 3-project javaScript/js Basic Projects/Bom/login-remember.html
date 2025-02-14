@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Save My login info</title>
+    <style>
+
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: orange;
+            height: 100vh;
+            font-family: sans-serif;
+
+           
+        }
+
+        #loginbox{
+            width: 30%;
+            background: rgba(255, 255, 255, 0.2);
+            box-shadow: 0 0 10px rgba(0, 0, 0, .0);
+            padding: 22px;
+            box-shadow:1px 1px 2px 2px #fff;
+            border-radius: 22px;
+        }
+    
+
+        label{
+            display: block;
+            font-size: 22px;
+            /* text-align: center; */
+        }
+        input{
+            width: 100%;
+            height: 29px;
+            margin-bottom: 12px;
+            border-radius: 12px;
+            border: 1px solid black;
+        }
+
+        #submit{
+            width: 120px;
+            height: 40px;
+            background-color: #000000ff;
+            border: 2px solid #ffffff;
+            color: white;
+            font-family: sans-serif;
+            border-radius: unset;
+
+        }
+        #check{
+            display: inline-block;
+            width: 20px;
+            height: 20px;
+            vertical-align:-webkit-baseline-middle;
+           
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <form action="" id="loginbox">
+            <h2 align="center">Login form</h2>
+            <label for="username">UserName</label>
+            <input type="text" id="username">
+
+            <label for="password">Password</label>
+            <input type="password" name="" id="password">
+
+            <input type="submit" value="Login" id="submit">
+            
+            <input type="checkbox" id="check" onclick="remember()"> Remember Me!
+
+        </form>
+    </div>
+
+    <script>
+        window.onload=function (){
+            if(document.cookie.length!==0){
+               
+           
+            var user =document.cookie.split('=');
+            document.getElementById("username").value=user[1];
+            document.getElementById("password").value=user[2];
+
+            var check = document.getElementById("check").checked="checked";
+            if(check=="checked"){
+                window.alert("remember me is checked");
+                document.getElementById("check").onclick=function(){
+                    document.cookie="user=;expires=Thu, 01 Jan 1970 00:00:00 UTC";
+                }
+            }
+        }
+     }
+
+
+        function remember(){
+            var user = document.getElementById("username").value;
+            var pass = document.getElementById("password").value;
+            document.cookie ="user="+user+"="+pass+";expires=sun,3 december 2023 24:02 UTC";
+        }
+    </script>
+
+</body>
+
+</html>
